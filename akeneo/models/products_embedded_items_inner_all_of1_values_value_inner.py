@@ -29,7 +29,7 @@ class ProductsEmbeddedItemsInnerAllOf1ValuesValueInner(BaseModel):
     """
     scope: Optional[StrictStr] = Field(None, description="<a href='api-reference.html#Channel'>Channel</a> code of the product value")
     locale: Optional[StrictStr] = Field(None, description="<a href='api-reference.html#Locale'>Locale</a> code of the product value")
-    data: Optional[Dict[str, Any]] = Field(None, description="Product value. See <a href='/concepts/products.html#the-data-format'>the `data` format</a> section for more details.")
+    data: Optional[Any] = Field(None, description="Product value. See <a href='/concepts/products.html#the-data-format'>the `data` format</a> section for more details.")
     linked_data: Optional[ProductsEmbeddedItemsInnerAllOf1ValuesValueInnerLinkedData] = None
     __properties = ["scope", "locale", "data", "linked_data"]
 
