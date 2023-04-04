@@ -17,3 +17,5 @@ Issue when trying to get products from the api. Fixed by setting `ProductsEmbedd
 
 Issue when trying to get products from the api. `dict has no attribute "from_dict"` Fixed by changing line 120 from `Products1EmbeddedItemsInner` to `"values": dict((_k, [ProductsEmbeddedItemsInnerAllOf1ValuesValueInner.from_dict(_item) for _item in _v]) for _k, _v in obj.get("values").items()),`
 Same for line 122 of ProductsEmbeddedItemsInner
+
+Issue when getting assets. Same issue as above. Fixed by Changing line 79 from `AssetEmbeddedItemsInnerAllOf` to `"values": dict((_k, [AssetEmbeddedItemsInnerAllOfValuesValueInner.from_dict(_item) for _item in _v]) for _k, _v in obj.get("values").items()), `
