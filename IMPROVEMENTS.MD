@@ -19,3 +19,4 @@ Issue when trying to get products from the api. `dict has no attribute "from_dic
 Same for line 122 of ProductsEmbeddedItemsInner
 
 Issue when getting assets. Same issue as above. Fixed by Changing line 79 from `AssetEmbeddedItemsInnerAllOf` to `"values": dict((_k, [AssetEmbeddedItemsInnerAllOfValuesValueInner.from_dict(_item) for _item in _v]) for _k, _v in obj.get("values").items()), `
+Set `data` from `AssetEmbeddedItemsInnerAllOfValuesValueInner` to any as well.
