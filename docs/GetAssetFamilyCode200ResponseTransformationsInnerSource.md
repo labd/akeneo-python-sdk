@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.get_asset_family_code200_response_transformations_inner_source import GetAssetFamilyCode200ResponseTransformationsInnerSource
+from akeneo.models.get_asset_family_code200_response_transformations_inner_source import GetAssetFamilyCode200ResponseTransformationsInnerSource
 
 # TODO update the JSON string below
 json = "{}"

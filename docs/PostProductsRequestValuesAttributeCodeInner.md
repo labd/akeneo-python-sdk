@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.post_products_request_values_attribute_code_inner import PostProductsRequestValuesAttributeCodeInner
+from akeneo.models.post_products_request_values_attribute_code_inner import PostProductsRequestValuesAttributeCodeInner
 
 # TODO update the JSON string below
 json = "{}"

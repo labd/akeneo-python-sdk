@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.post_categories_request_values_attribute_code_attribute_uuid_channel_code_locale_code_inner import PostCategoriesRequestValuesAttributeCodeAttributeUuidChannelCodeLocaleCodeInner
+from akeneo.models.post_categories_request_values_attribute_code_attribute_uuid_channel_code_locale_code_inner import PostCategoriesRequestValuesAttributeCodeAttributeUuidChannelCodeLocaleCodeInner
 
 # TODO update the JSON string below
 json = "{}"

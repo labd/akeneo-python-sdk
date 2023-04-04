@@ -36,7 +36,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.post_attributes_request import PostAttributesRequest
+from akeneo.models.post_attributes_request import PostAttributesRequest
 
 # TODO update the JSON string below
 json = "{}"

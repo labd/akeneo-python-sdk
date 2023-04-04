@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.post_attributes_request_table_configuration_inner import PostAttributesRequestTableConfigurationInner
+from akeneo.models.post_attributes_request_table_configuration_inner import PostAttributesRequestTableConfigurationInner
 
 # TODO update the JSON string below
 json = "{}"

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.patch_reference_entity_records_request_inner_values_attribute_code_inner import PatchReferenceEntityRecordsRequestInnerValuesAttributeCodeInner
+from akeneo.models.patch_reference_entity_records_request_inner_values_attribute_code_inner import PatchReferenceEntityRecordsRequestInnerValuesAttributeCodeInner
 
 # TODO update the JSON string below
 json = "{}"

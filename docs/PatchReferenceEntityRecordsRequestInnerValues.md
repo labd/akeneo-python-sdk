@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.patch_reference_entity_records_request_inner_values import PatchReferenceEntityRecordsRequestInnerValues
+from akeneo.models.patch_reference_entity_records_request_inner_values import PatchReferenceEntityRecordsRequestInnerValues
 
 # TODO update the JSON string below
 json = "{}"

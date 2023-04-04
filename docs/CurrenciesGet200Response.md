@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.currencies_get200_response import CurrenciesGet200Response
+from akeneo.models.currencies_get200_response import CurrenciesGet200Response
 
 # TODO update the JSON string below
 json = "{}"

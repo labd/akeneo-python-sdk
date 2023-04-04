@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.post_pam_assets_request import PostPamAssetsRequest
+from akeneo.models.post_pam_assets_request import PostPamAssetsRequest
 
 # TODO update the JSON string below
 json = "{}"

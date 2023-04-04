@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.reference_entity_record_list_all_of_values import ReferenceEntityRecordListAllOfValues
+from akeneo.models.reference_entity_record_list_all_of_values import ReferenceEntityRecordListAllOfValues
 
 # TODO update the JSON string below
 json = "{}"

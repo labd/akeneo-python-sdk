@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.post_attributes_request_table_configuration_inner_labels import PostAttributesRequestTableConfigurationInnerLabels
+from akeneo.models.post_attributes_request_table_configuration_inner_labels import PostAttributesRequestTableConfigurationInnerLabels
 
 # TODO update the JSON string below
 json = "{}"

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.post_pam_assets_request_variation_files_inner_link_download import PostPamAssetsRequestVariationFilesInnerLinkDownload
+from akeneo.models.post_pam_assets_request_variation_files_inner_link_download import PostPamAssetsRequestVariationFilesInnerLinkDownload
 
 # TODO update the JSON string below
 json = "{}"

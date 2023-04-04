@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.post_pam_assets_request_variation_files_inner_link import PostPamAssetsRequestVariationFilesInnerLink
+from akeneo.models.post_pam_assets_request_variation_files_inner_link import PostPamAssetsRequestVariationFilesInnerLink
 
 # TODO update the JSON string below
 json = "{}"

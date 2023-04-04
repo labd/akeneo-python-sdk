@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.association_types_post_request_labels import AssociationTypesPostRequestLabels
+from akeneo.models.association_types_post_request_labels import AssociationTypesPostRequestLabels
 
 # TODO update the JSON string below
 json = "{}"

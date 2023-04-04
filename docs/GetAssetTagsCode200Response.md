@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.get_asset_tags_code200_response import GetAssetTagsCode200Response
+from akeneo.models.get_asset_tags_code200_response import GetAssetTagsCode200Response
 
 # TODO update the JSON string below
 json = "{}"

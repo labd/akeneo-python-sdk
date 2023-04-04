@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.asset_list_all_of_values_attribute_code import AssetListAllOfValuesAttributeCode
+from akeneo.models.asset_list_all_of_values_attribute_code import AssetListAllOfValuesAttributeCode
 
 # TODO update the JSON string below
 json = "{}"

@@ -1,4 +1,4 @@
-# openapi_client.MappingSchemaForProductsApi
+# akeneo.MappingSchemaForProductsApi
 
 All URIs are relative to *http://demo.akeneo.com*
 
@@ -22,20 +22,20 @@ This endpoint allows you to delete the product mapping schema related to a catal
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MappingSchemaForProductsApi(api_client)
+    api_instance = akeneo.MappingSchemaForProductsApi(api_client)
     id = 'id_example' # str | Catalog ID
 
     try:
@@ -87,20 +87,20 @@ This endpoint allows you to retrieve the product mapping schema related to a cat
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MappingSchemaForProductsApi(api_client)
+    api_instance = akeneo.MappingSchemaForProductsApi(api_client)
     id = 'id_example' # str | Catalog ID
 
     try:
@@ -154,22 +154,22 @@ This endpoint allows you to create or update the product mapping schema related 
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MappingSchemaForProductsApi(api_client)
+    api_instance = akeneo.MappingSchemaForProductsApi(api_client)
     id = 'id_example' # str | Catalog ID
-    body = openapi_client.GetAppCatalogsMappingSchemaProduct200Response() # GetAppCatalogsMappingSchemaProduct200Response |  (optional)
+    body = akeneo.GetAppCatalogsMappingSchemaProduct200Response() # GetAppCatalogsMappingSchemaProduct200Response |  (optional)
 
     try:
         # Create or update the product mapping schema related to a catalog

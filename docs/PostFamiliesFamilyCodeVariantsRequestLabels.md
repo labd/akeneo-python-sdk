@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.post_families_family_code_variants_request_labels import PostFamiliesFamilyCodeVariantsRequestLabels
+from akeneo.models.post_families_family_code_variants_request_labels import PostFamiliesFamilyCodeVariantsRequestLabels
 
 # TODO update the JSON string below
 json = "{}"

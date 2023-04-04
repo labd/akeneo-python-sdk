@@ -7,4 +7,4 @@ generate:
 	openapi-generator generate \
 		-i ./akeneo-web-api.json \
 		-g python-nextgen \
-		--additional-properties=packageName=akeneo \
+		--additional-properties=packageName=akeneo,projectName=akeneo-python-sdk,packageUrl=https://github.com/labd/akeneo-python-sdk.git \

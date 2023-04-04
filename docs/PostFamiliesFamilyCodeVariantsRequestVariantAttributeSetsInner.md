@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.post_families_family_code_variants_request_variant_attribute_sets_inner import PostFamiliesFamilyCodeVariantsRequestVariantAttributeSetsInner
+from akeneo.models.post_families_family_code_variants_request_variant_attribute_sets_inner import PostFamiliesFamilyCodeVariantsRequestVariantAttributeSetsInner
 
 # TODO update the JSON string below
 json = "{}"
