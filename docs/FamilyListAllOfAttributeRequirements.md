@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.family_list_all_of_attribute_requirements import FamilyListAllOfAttributeRequirements
+from akeneo.models.family_list_all_of_attribute_requirements import FamilyListAllOfAttributeRequirements
 
 # TODO update the JSON string below
 json = "{}"

@@ -1,4 +1,4 @@
-# openapi_client.PublishedProductApi
+# akeneo.PublishedProductApi
 
 All URIs are relative to *http://demo.akeneo.com*
 
@@ -21,20 +21,20 @@ This endpoint allows you to get a list of published products. Published products
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PublishedProductApi(api_client)
+    api_instance = akeneo.PublishedProductApi(api_client)
     search = 'search_example' # str | Filter published products, for more details see the <a href=\"/documentation/filter.html\">Filters</a> section (optional)
     scope = 'scope_example' # str | Filter published product values to return scopable attributes for the given channel as well as the non localizable/non scopable attributes, for more details see the <a href=\"/documentation/filter.html#filter-published-product-values\">Filter on published product values</a> section (optional)
     locales = 'locales_example' # str | Filter published product values to return localizable attributes for the given locales as well as the non localizable/non scopable attributes, for more details see the <a href=\"/documentation/filter.html#filter-published-product-values\">Filter on published product values</a> section (optional)
@@ -106,20 +106,20 @@ This endpoint allows you to get the information about a given published product.
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PublishedProductApi(api_client)
+    api_instance = akeneo.PublishedProductApi(api_client)
     code = 'code_example' # str | Code of the resource
 
     try:

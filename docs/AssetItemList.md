@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.asset_item_list import AssetItemList
+from akeneo.models.asset_item_list import AssetItemList
 
 # TODO update the JSON string below
 json = "{}"

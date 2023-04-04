@@ -1,4 +1,4 @@
-# openapi_client.AssetAttributeOptionApi
+# akeneo.AssetAttributeOptionApi
 
 All URIs are relative to *http://demo.akeneo.com*
 
@@ -22,20 +22,20 @@ This endpoint allows you to get the information about a given asset attribute op
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AssetAttributeOptionApi(api_client)
+    api_instance = akeneo.AssetAttributeOptionApi(api_client)
     asset_family_code = 'asset_family_code_example' # str | Code of the asset family
     attribute_code = 'attribute_code_example' # str | Code of the attribute
     code = 'code_example' # str | Code of the resource
@@ -93,20 +93,20 @@ This endpoint allows you to get a list of attribute options for a given asset fa
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AssetAttributeOptionApi(api_client)
+    api_instance = akeneo.AssetAttributeOptionApi(api_client)
     asset_family_code = 'asset_family_code_example' # str | Code of the asset family
     attribute_code = 'attribute_code_example' # str | Code of the attribute
 
@@ -161,24 +161,24 @@ This endpoint allows you to update a given option for a given attribute and a gi
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AssetAttributeOptionApi(api_client)
+    api_instance = akeneo.AssetAttributeOptionApi(api_client)
     asset_family_code = 'asset_family_code_example' # str | Code of the asset family
     attribute_code = 'attribute_code_example' # str | Code of the attribute
     code = 'code_example' # str | Code of the resource
-    body = openapi_client.GetAssetFamilyAttributesAttributeCodeOptions200ResponseInner() # GetAssetFamilyAttributesAttributeCodeOptions200ResponseInner | 
+    body = akeneo.GetAssetFamilyAttributesAttributeCodeOptions200ResponseInner() # GetAssetFamilyAttributesAttributeCodeOptions200ResponseInner | 
 
     try:
         # Update/create an asset attribute option for a given asset family

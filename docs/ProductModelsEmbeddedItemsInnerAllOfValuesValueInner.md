@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.product_models_embedded_items_inner_all_of_values_value_inner import ProductModelsEmbeddedItemsInnerAllOfValuesValueInner
+from akeneo.models.product_models_embedded_items_inner_all_of_values_value_inner import ProductModelsEmbeddedItemsInnerAllOfValuesValueInner
 
 # TODO update the JSON string below
 json = "{}"

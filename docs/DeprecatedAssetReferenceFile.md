@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.deprecated_asset_reference_file import DeprecatedAssetReferenceFile
+from akeneo.models.deprecated_asset_reference_file import DeprecatedAssetReferenceFile
 
 # TODO update the JSON string below
 json = "{}"

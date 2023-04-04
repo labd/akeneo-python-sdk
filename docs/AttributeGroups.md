@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.attribute_groups import AttributeGroups
+from akeneo.models.attribute_groups import AttributeGroups
 
 # TODO update the JSON string below
 json = "{}"

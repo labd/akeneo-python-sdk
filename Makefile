@@ -7,3 +7,4 @@ generate:
 	openapi-generator generate \
 		-i ./akeneo-web-api.json \
 		-g python-nextgen \
+		--additional-properties=packageName=akeneo \

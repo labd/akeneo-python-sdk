@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.get_reference_entity_attributes_code200_response import GetReferenceEntityAttributesCode200Response
+from akeneo.models.get_reference_entity_attributes_code200_response import GetReferenceEntityAttributesCode200Response
 
 # TODO update the JSON string below
 json = "{}"

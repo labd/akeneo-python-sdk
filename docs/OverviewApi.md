@@ -1,4 +1,4 @@
-# openapi_client.OverviewApi
+# akeneo.OverviewApi
 
 All URIs are relative to *http://demo.akeneo.com*
 
@@ -20,20 +20,20 @@ This endpoint allows you to get the list of all the available endpoints. No need
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.OverviewApi(api_client)
+    api_instance = akeneo.OverviewApi(api_client)
 
     try:
         # Get list of all endpoints

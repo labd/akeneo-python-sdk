@@ -1,4 +1,4 @@
-# openapi_client.PAMAssetVariationFileApi
+# akeneo.PAMAssetVariationFileApi
 
 All URIs are relative to *http://demo.akeneo.com*
 
@@ -22,20 +22,20 @@ This endpoint allows you to get the information about a variation file of a give
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PAMAssetVariationFileApi(api_client)
+    api_instance = akeneo.PAMAssetVariationFileApi(api_client)
     asset_code = 'asset_code_example' # str | Code of the asset
     channel_code = 'channel_code_example' # str | Code of the channel
     locale_code = 'locale_code_example' # str | Code of the locale if the asset is localizable or equal to `no-locale` if the asset is not localizable
@@ -94,20 +94,20 @@ This endpoint allows you to download a given variation file.
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PAMAssetVariationFileApi(api_client)
+    api_instance = akeneo.PAMAssetVariationFileApi(api_client)
     asset_code = 'asset_code_example' # str | Code of the asset
     channel_code = 'channel_code_example' # str | Code of the channel
     locale_code = 'locale_code_example' # str | Code of the locale if the asset is localizable or equal to `no-locale` if the asset is not localizable
@@ -163,25 +163,25 @@ This endpoint allows you to upload a new variation file for a given PAM asset, c
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PAMAssetVariationFileApi(api_client)
+    api_instance = akeneo.PAMAssetVariationFileApi(api_client)
     asset_code = 'asset_code_example' # str | Code of the asset
     channel_code = 'channel_code_example' # str | Code of the channel
     locale_code = 'locale_code_example' # str | Code of the locale if the asset is localizable or equal to `no-locale` if the asset is not localizable
     content_type = 'content_type_example' # str | Equal to 'multipart/form-data', no other value allowed
-    body = openapi_client.PostReferenceFilesLocaleCodeRequest() # PostReferenceFilesLocaleCodeRequest |  (optional)
+    body = akeneo.PostReferenceFilesLocaleCodeRequest() # PostReferenceFilesLocaleCodeRequest |  (optional)
 
     try:
         # Upload a new variation file

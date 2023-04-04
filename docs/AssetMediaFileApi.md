@@ -1,4 +1,4 @@
-# openapi_client.AssetMediaFileApi
+# akeneo.AssetMediaFileApi
 
 All URIs are relative to *http://demo.akeneo.com*
 
@@ -21,20 +21,20 @@ This endpoint allows you to download a given media file that is associated with 
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AssetMediaFileApi(api_client)
+    api_instance = akeneo.AssetMediaFileApi(api_client)
     code = 'code_example' # str | Code of the resource
 
     try:
@@ -85,22 +85,22 @@ This endpoint allows you to create a new media file and associate it to a media 
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AssetMediaFileApi(api_client)
+    api_instance = akeneo.AssetMediaFileApi(api_client)
     content_type = 'content_type_example' # str | Equal to 'multipart/form-data', no other value allowed
-    body = openapi_client.PostReferenceEntityMediaFilesRequest() # PostReferenceEntityMediaFilesRequest |  (optional)
+    body = akeneo.PostReferenceEntityMediaFilesRequest() # PostReferenceEntityMediaFilesRequest |  (optional)
 
     try:
         # Create a new media file for an asset

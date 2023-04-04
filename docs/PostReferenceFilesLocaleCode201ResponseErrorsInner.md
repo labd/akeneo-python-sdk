@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.post_reference_files_locale_code201_response_errors_inner import PostReferenceFilesLocaleCode201ResponseErrorsInner
+from akeneo.models.post_reference_files_locale_code201_response_errors_inner import PostReferenceFilesLocaleCode201ResponseErrorsInner
 
 # TODO update the JSON string below
 json = "{}"

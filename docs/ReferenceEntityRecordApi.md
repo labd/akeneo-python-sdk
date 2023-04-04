@@ -1,4 +1,4 @@
-# openapi_client.ReferenceEntityRecordApi
+# akeneo.ReferenceEntityRecordApi
 
 All URIs are relative to *http://demo.akeneo.com*
 
@@ -23,20 +23,20 @@ This endpoint allows you to get a list of records of a given reference entity. R
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ReferenceEntityRecordApi(api_client)
+    api_instance = akeneo.ReferenceEntityRecordApi(api_client)
     reference_entity_code = 'reference_entity_code_example' # str | Code of the reference entity
     search = 'search_example' # str | Filter records of the reference entity, for more details see the <a href=\"/documentation/filter.html#filter-reference-entity-records\">Filters</a> section (optional)
     channel = 'channel_example' # str | Filter attribute values to return scopable attributes for the given channel as well as the non localizable/non scopable attributes, for more details see the <a href=\"/documentation/filter.html#record-values-by-channel\">Filter attribute values by channel</a> section (optional)
@@ -97,20 +97,20 @@ This endpoint allows you to get the information about a given record for a given
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ReferenceEntityRecordApi(api_client)
+    api_instance = akeneo.ReferenceEntityRecordApi(api_client)
     reference_entity_code = 'reference_entity_code_example' # str | Code of the reference entity
     code = 'code_example' # str | Code of the resource
 
@@ -166,22 +166,22 @@ This endpoint allows you to update and/or create several records of one given re
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ReferenceEntityRecordApi(api_client)
+    api_instance = akeneo.ReferenceEntityRecordApi(api_client)
     reference_entity_code = 'reference_entity_code_example' # str | Code of the reference entity
-    body = [openapi_client.PatchReferenceEntityRecordsRequestInner()] # List[PatchReferenceEntityRecordsRequestInner] | 
+    body = [akeneo.PatchReferenceEntityRecordsRequestInner()] # List[PatchReferenceEntityRecordsRequestInner] | 
 
     try:
         # Update/create several reference entity records
@@ -235,23 +235,23 @@ This endpoint allows you to update a given record of a given renference entity. 
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ReferenceEntityRecordApi(api_client)
+    api_instance = akeneo.ReferenceEntityRecordApi(api_client)
     reference_entity_code = 'reference_entity_code_example' # str | Code of the reference entity
     code = 'code_example' # str | Code of the resource
-    body = openapi_client.PatchReferenceEntityRecordsCodeRequest() # PatchReferenceEntityRecordsCodeRequest | 
+    body = akeneo.PatchReferenceEntityRecordsCodeRequest() # PatchReferenceEntityRecordsCodeRequest | 
 
     try:
         # Update/create a record of a given reference entity

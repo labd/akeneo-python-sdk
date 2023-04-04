@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.asset_families_embedded_items_inner_all_of_product_link_rules_inner_assign_assets_to_inner import AssetFamiliesEmbeddedItemsInnerAllOfProductLinkRulesInnerAssignAssetsToInner
+from akeneo.models.asset_families_embedded_items_inner_all_of_product_link_rules_inner_assign_assets_to_inner import AssetFamiliesEmbeddedItemsInnerAllOfProductLinkRulesInnerAssignAssetsToInner
 
 # TODO update the JSON string below
 json = "{}"

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.currencies import Currencies
+from akeneo.models.currencies import Currencies
 
 # TODO update the JSON string below
 json = "{}"

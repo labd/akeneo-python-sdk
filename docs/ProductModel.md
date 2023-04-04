@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.product_model import ProductModel
+from akeneo.models.product_model import ProductModel
 
 # TODO update the JSON string below
 json = "{}"

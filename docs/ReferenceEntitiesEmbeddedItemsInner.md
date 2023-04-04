@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.reference_entities_embedded_items_inner import ReferenceEntitiesEmbeddedItemsInner
+from akeneo.models.reference_entities_embedded_items_inner import ReferenceEntitiesEmbeddedItemsInner
 
 # TODO update the JSON string below
 json = "{}"

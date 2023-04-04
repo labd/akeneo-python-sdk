@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.reference_entity_all_of1_labels import ReferenceEntityAllOf1Labels
+from akeneo.models.reference_entity_all_of1_labels import ReferenceEntityAllOf1Labels
 
 # TODO update the JSON string below
 json = "{}"

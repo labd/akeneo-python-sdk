@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.attribute_option_list_all_of import AttributeOptionListAllOf
+from akeneo.models.attribute_option_list_all_of import AttributeOptionListAllOf
 
 # TODO update the JSON string below
 json = "{}"

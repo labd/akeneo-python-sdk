@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.attributes_embedded_items_inner_all_of_table_configuration_inner_labels import AttributesEmbeddedItemsInnerAllOfTableConfigurationInnerLabels
+from akeneo.models.attributes_embedded_items_inner_all_of_table_configuration_inner_labels import AttributesEmbeddedItemsInnerAllOfTableConfigurationInnerLabels
 
 # TODO update the JSON string below
 json = "{}"

@@ -1,4 +1,4 @@
-# openapi_client.AssetFamilyApi
+# akeneo.AssetFamilyApi
 
 All URIs are relative to *http://demo.akeneo.com*
 
@@ -22,20 +22,20 @@ This endpoint allows you to get a list of asset families. Asset families are pag
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AssetFamilyApi(api_client)
+    api_instance = akeneo.AssetFamilyApi(api_client)
     search_after = 'cursor to the first page' # str | Cursor when using the `search_after` pagination method type. <strong>Should never be set manually</strong>, see <a href=\"/documentation/pagination.html\">Pagination</a> section (optional) (default to 'cursor to the first page')
 
     try:
@@ -88,20 +88,20 @@ This endpoint allows you to get the information about a given asset family.
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AssetFamilyApi(api_client)
+    api_instance = akeneo.AssetFamilyApi(api_client)
     code = 'code_example' # str | Code of the resource
 
     try:
@@ -155,22 +155,22 @@ This endpoint allows you to update a given asset family. Note that if the asset 
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AssetFamilyApi(api_client)
+    api_instance = akeneo.AssetFamilyApi(api_client)
     code = 'code_example' # str | Code of the resource
-    body = openapi_client.AssetFamiliesEmbeddedItemsInnerAllOf() # AssetFamiliesEmbeddedItemsInnerAllOf | 
+    body = akeneo.AssetFamiliesEmbeddedItemsInnerAllOf() # AssetFamiliesEmbeddedItemsInnerAllOf | 
 
     try:
         # Update/create an asset family

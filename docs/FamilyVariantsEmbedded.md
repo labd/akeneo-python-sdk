@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.family_variants_embedded import FamilyVariantsEmbedded
+from akeneo.models.family_variants_embedded import FamilyVariantsEmbedded
 
 # TODO update the JSON string below
 json = "{}"

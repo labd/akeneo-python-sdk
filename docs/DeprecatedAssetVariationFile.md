@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.deprecated_asset_variation_file import DeprecatedAssetVariationFile
+from akeneo.models.deprecated_asset_variation_file import DeprecatedAssetVariationFile
 
 # TODO update the JSON string below
 json = "{}"

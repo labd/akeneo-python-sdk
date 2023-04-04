@@ -1,4 +1,4 @@
-# openapi_client.CatalogsApi
+# akeneo.CatalogsApi
 
 All URIs are relative to *http://demo.akeneo.com*
 
@@ -24,20 +24,20 @@ This endpoint allows you to delete a catalog.
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CatalogsApi(api_client)
+    api_instance = akeneo.CatalogsApi(api_client)
     id = 'id_example' # str | Catalog ID
 
     try:
@@ -89,20 +89,20 @@ This endpoint allows you to get the information about a catalog.
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CatalogsApi(api_client)
+    api_instance = akeneo.CatalogsApi(api_client)
     id = 'id_example' # str | Catalog ID
 
     try:
@@ -156,20 +156,20 @@ This endpoint allows you to get the list of catalogs you owned.
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CatalogsApi(api_client)
+    api_instance = akeneo.CatalogsApi(api_client)
     page = 1 # int | Number of the page to retrieve when using the `page` pagination method type. <strong>Should never be set manually</strong>, see <a href=\"/documentation/pagination.html#pagination\">Pagination</a> section (optional) (default to 1)
     limit = 100 # int | Number of results by page, see <a href=\"/documentation/pagination.html\">Pagination</a> section (optional) (default to 100)
 
@@ -224,22 +224,22 @@ This endpoint allows you to update a catalog.
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CatalogsApi(api_client)
+    api_instance = akeneo.CatalogsApi(api_client)
     id = 'id_example' # str | Catalog ID
-    body = openapi_client.PostAppCatalogRequest() # PostAppCatalogRequest |  (optional)
+    body = akeneo.PostAppCatalogRequest() # PostAppCatalogRequest |  (optional)
 
     try:
         # Update a catalog
@@ -295,21 +295,21 @@ This endpoint allows you to create a new catalog.
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CatalogsApi(api_client)
-    body = openapi_client.PostAppCatalogRequest() # PostAppCatalogRequest |  (optional)
+    api_instance = akeneo.CatalogsApi(api_client)
+    body = akeneo.PostAppCatalogRequest() # PostAppCatalogRequest |  (optional)
 
     try:
         # Create a new catalog

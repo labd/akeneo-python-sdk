@@ -1,4 +1,4 @@
-# openapi_client.AttributeApi
+# akeneo.AttributeApi
 
 All URIs are relative to *http://demo.akeneo.com*
 
@@ -24,20 +24,20 @@ This endpoint allows you to get a list of attributes. Attributes are paginated a
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AttributeApi(api_client)
+    api_instance = akeneo.AttributeApi(api_client)
     search = 'search_example' # str | Filter attributes, for more details see the <a href=\"/documentation/filter.html#filter-attributes\">Filters</a> section. (optional)
     page = 1 # int | Number of the page to retrieve when using the `page` pagination method type. <strong>Should never be set manually</strong>, see <a href=\"/documentation/pagination.html#pagination\">Pagination</a> section (optional) (default to 1)
     limit = 10 # int | Number of results by page, see <a href=\"/documentation/pagination.html\">Pagination</a> section (optional) (default to 10)
@@ -99,20 +99,20 @@ This endpoint allows you to get the information about a given attribute.
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AttributeApi(api_client)
+    api_instance = akeneo.AttributeApi(api_client)
     code = 'code_example' # str | Code of the resource
     with_table_select_options = False # bool | Return the options of 'select' column types (of a table attribute) in the response. (Only available since the 7.0 version) (optional) (default to False)
 
@@ -169,21 +169,21 @@ This endpoint allows you to update and/or create several attributes at once.
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AttributeApi(api_client)
-    body = openapi_client.PatchAttributesRequest() # PatchAttributesRequest |  (optional)
+    api_instance = akeneo.AttributeApi(api_client)
+    body = akeneo.PatchAttributesRequest() # PatchAttributesRequest |  (optional)
 
     try:
         # Update/create several attributes
@@ -237,22 +237,22 @@ This endpoint allows you to update a given attribute. Know more about <a href=\"
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AttributeApi(api_client)
+    api_instance = akeneo.AttributeApi(api_client)
     code = 'code_example' # str | Code of the resource
-    body = openapi_client.AttributesEmbeddedItemsInnerAllOf() # AttributesEmbeddedItemsInnerAllOf | 
+    body = akeneo.AttributesEmbeddedItemsInnerAllOf() # AttributesEmbeddedItemsInnerAllOf | 
 
     try:
         # Update/create an attribute
@@ -307,21 +307,21 @@ This endpoint allows you to create a new attribute.
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AttributeApi(api_client)
-    body = openapi_client.AttributesEmbeddedItemsInnerAllOf() # AttributesEmbeddedItemsInnerAllOf |  (optional)
+    api_instance = akeneo.AttributeApi(api_client)
+    body = akeneo.AttributesEmbeddedItemsInnerAllOf() # AttributesEmbeddedItemsInnerAllOf |  (optional)
 
     try:
         # Create a new attribute

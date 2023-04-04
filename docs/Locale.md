@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.locale import Locale
+from akeneo.models.locale import Locale
 
 # TODO update the JSON string below
 json = "{}"

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.family_variant_list import FamilyVariantList
+from akeneo.models.family_variant_list import FamilyVariantList
 
 # TODO update the JSON string below
 json = "{}"

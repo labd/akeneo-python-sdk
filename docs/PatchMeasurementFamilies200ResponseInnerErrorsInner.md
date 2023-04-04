@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.patch_measurement_families200_response_inner_errors_inner import PatchMeasurementFamilies200ResponseInnerErrorsInner
+from akeneo.models.patch_measurement_families200_response_inner_errors_inner import PatchMeasurementFamilies200ResponseInnerErrorsInner
 
 # TODO update the JSON string below
 json = "{}"

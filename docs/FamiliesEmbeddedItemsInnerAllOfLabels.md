@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.families_embedded_items_inner_all_of_labels import FamiliesEmbeddedItemsInnerAllOfLabels
+from akeneo.models.families_embedded_items_inner_all_of_labels import FamiliesEmbeddedItemsInnerAllOfLabels
 
 # TODO update the JSON string below
 json = "{}"

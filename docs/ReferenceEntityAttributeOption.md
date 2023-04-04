@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.reference_entity_attribute_option import ReferenceEntityAttributeOption
+from akeneo.models.reference_entity_attribute_option import ReferenceEntityAttributeOption
 
 # TODO update the JSON string below
 json = "{}"

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.error_by_line import ErrorByLine
+from akeneo.models.error_by_line import ErrorByLine
 
 # TODO update the JSON string below
 json = "{}"

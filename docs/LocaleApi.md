@@ -1,4 +1,4 @@
-# openapi_client.LocaleApi
+# akeneo.LocaleApi
 
 All URIs are relative to *http://demo.akeneo.com*
 
@@ -21,20 +21,20 @@ This endpoint allows you to get a list of locales. Locales are paginated and sor
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.LocaleApi(api_client)
+    api_instance = akeneo.LocaleApi(api_client)
     search = 'search_example' # str | Filter locales, for more details see the <a href=\"/documentation/filter.html\">Filters</a> section (optional)
     page = 1 # int | Number of the page to retrieve when using the `page` pagination method type. <strong>Should never be set manually</strong>, see <a href=\"/documentation/pagination.html#pagination\">Pagination</a> section (optional) (default to 1)
     limit = 10 # int | Number of results by page, see <a href=\"/documentation/pagination.html\">Pagination</a> section (optional) (default to 10)
@@ -94,20 +94,20 @@ This endpoint allows you to get the information about a given locale.
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.LocaleApi(api_client)
+    api_instance = akeneo.LocaleApi(api_client)
     code = 'code_example' # str | Code of the resource
 
     try:

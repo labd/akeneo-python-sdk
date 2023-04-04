@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.search_after_pagination import SearchAfterPagination
+from akeneo.models.search_after_pagination import SearchAfterPagination
 
 # TODO update the JSON string below
 json = "{}"

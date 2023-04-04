@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.association_types import AssociationTypes
+from akeneo.models.association_types import AssociationTypes
 
 # TODO update the JSON string below
 json = "{}"

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.get_reference_files_locale_code200_response_link import GetReferenceFilesLocaleCode200ResponseLink
+from akeneo.models.get_reference_files_locale_code200_response_link import GetReferenceFilesLocaleCode200ResponseLink
 
 # TODO update the JSON string below
 json = "{}"

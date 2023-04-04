@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.attribute_options import AttributeOptions
+from akeneo.models.attribute_options import AttributeOptions
 
 # TODO update the JSON string below
 json = "{}"

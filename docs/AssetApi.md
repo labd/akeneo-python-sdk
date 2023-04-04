@@ -1,4 +1,4 @@
-# openapi_client.AssetApi
+# akeneo.AssetApi
 
 All URIs are relative to *http://demo.akeneo.com*
 
@@ -24,20 +24,20 @@ This endpoint allows you to delete a given asset. This endpoint is case sensitiv
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AssetApi(api_client)
+    api_instance = akeneo.AssetApi(api_client)
     asset_family_code = 'asset_family_code_example' # str | Code of the asset family
     code = 'code_example' # str | Code of the resource
 
@@ -90,20 +90,20 @@ This endpoint allows you to get a list of assets of a given asset family. Assets
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AssetApi(api_client)
+    api_instance = akeneo.AssetApi(api_client)
     asset_family_code = 'asset_family_code_example' # str | Code of the asset family
     search = 'search_example' # str | Filter assets, for more details see the <a href=\"/documentation/filter.html#filter-assets\">Asset filters</a> section (optional)
     channel = 'channel_example' # str | Filter asset values to return scopable asset attributes for the given channel as well as the non localizable/non scopable asset attributes, for more details see the <a href=\"/documentation/filter.html#asset-values-by-channel\">Filter asset values by channel</a> section (optional)
@@ -164,20 +164,20 @@ This endpoint allows you to get the information about a given asset for a given 
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AssetApi(api_client)
+    api_instance = akeneo.AssetApi(api_client)
     asset_family_code = 'asset_family_code_example' # str | Code of the asset family
     code = 'code_example' # str | Code of the resource
 
@@ -233,23 +233,23 @@ This endpoint allows you to update a given asset of a given asset family. Learn 
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AssetApi(api_client)
+    api_instance = akeneo.AssetApi(api_client)
     asset_family_code = 'asset_family_code_example' # str | Code of the asset family
     code = 'code_example' # str | Code of the resource
-    body = openapi_client.AssetEmbeddedItemsInnerAllOf() # AssetEmbeddedItemsInnerAllOf | 
+    body = akeneo.AssetEmbeddedItemsInnerAllOf() # AssetEmbeddedItemsInnerAllOf | 
 
     try:
         # Update/create an asset
@@ -304,22 +304,22 @@ This endpoint allows you to update and/or create several assets of one given ass
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AssetApi(api_client)
+    api_instance = akeneo.AssetApi(api_client)
     asset_family_code = 'asset_family_code_example' # str | Code of the asset family
-    body = [openapi_client.PatchAssetsRequestInner()] # List[PatchAssetsRequestInner] | 
+    body = [akeneo.PatchAssetsRequestInner()] # List[PatchAssetsRequestInner] | 
 
     try:
         # Update/create several assets

@@ -1,4 +1,4 @@
-# openapi_client.ProductIdentifierApi
+# akeneo.ProductIdentifierApi
 
 All URIs are relative to *http://demo.akeneo.com*
 
@@ -27,20 +27,20 @@ This endpoint allows you to delete a given product. In the Enterprise Edition, s
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProductIdentifierApi(api_client)
+    api_instance = akeneo.ProductIdentifierApi(api_client)
     code = 'code_example' # str | Code of the resource
 
     try:
@@ -92,20 +92,20 @@ This endpoint allows you to get the information about a given draft.
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProductIdentifierApi(api_client)
+    api_instance = akeneo.ProductIdentifierApi(api_client)
     code = 'code_example' # str | Code of the resource
 
     try:
@@ -160,20 +160,20 @@ This endpoint allows you to get a list of products. Products are paginated and t
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProductIdentifierApi(api_client)
+    api_instance = akeneo.ProductIdentifierApi(api_client)
     search = 'search_example' # str | Filter products, for more details see the <a href=\"/documentation/filter.html\">Filters</a> section (optional)
     scope = 'scope_example' # str | Filter product values to return scopable attributes for the given channel as well as the non localizable/non scopable attributes, for more details see the <a href=\"/documentation/filter.html#via-channel\">Filter product values via channel</a> section (optional)
     locales = 'locales_example' # str | Filter product values to return localizable attributes for the given locales as well as the non localizable/non scopable attributes, for more details see the <a href=\"/documentation/filter.html#via-locale\">Filter product values via locale</a> section (optional)
@@ -250,20 +250,20 @@ This endpoint allows you to get the information about a given product. In the En
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProductIdentifierApi(api_client)
+    api_instance = akeneo.ProductIdentifierApi(api_client)
     code = 'code_example' # str | Code of the resource
     with_attribute_options = False # bool | Return labels of attribute options in the response. (Only available since the 5.0 version) (optional) (default to False)
     with_quality_scores = False # bool | Return product quality scores in the response. (Only available since the 5.0 version) (optional) (default to False)
@@ -324,21 +324,21 @@ This endpoint allows you to update and/or create several products at once. Learn
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProductIdentifierApi(api_client)
-    body = openapi_client.PatchProductsRequest() # PatchProductsRequest |  (optional)
+    api_instance = akeneo.ProductIdentifierApi(api_client)
+    body = akeneo.PatchProductsRequest() # PatchProductsRequest |  (optional)
 
     try:
         # Update/create several products
@@ -392,22 +392,22 @@ This endpoint allows you to update a given product. Learn more about <a href=\"/
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProductIdentifierApi(api_client)
+    api_instance = akeneo.ProductIdentifierApi(api_client)
     code = 'code_example' # str | Code of the resource
-    body = openapi_client.ProductsEmbeddedItemsInnerAllOf1() # ProductsEmbeddedItemsInnerAllOf1 | 
+    body = akeneo.ProductsEmbeddedItemsInnerAllOf1() # ProductsEmbeddedItemsInnerAllOf1 | 
 
     try:
         # Update/create a product
@@ -461,21 +461,21 @@ This endpoint allows you to create a new product. In the Enterprise Edition, sin
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProductIdentifierApi(api_client)
-    body = openapi_client.ProductsEmbeddedItemsInnerAllOf1() # ProductsEmbeddedItemsInnerAllOf1 |  (optional)
+    api_instance = akeneo.ProductIdentifierApi(api_client)
+    body = akeneo.ProductsEmbeddedItemsInnerAllOf1() # ProductsEmbeddedItemsInnerAllOf1 |  (optional)
 
     try:
         # Create a new product
@@ -528,20 +528,20 @@ This endpoint allows you to submit a draft for approval.
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProductIdentifierApi(api_client)
+    api_instance = akeneo.ProductIdentifierApi(api_client)
     code = 'code_example' # str | Code of the resource
 
     try:

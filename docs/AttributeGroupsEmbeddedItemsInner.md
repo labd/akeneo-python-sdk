@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.attribute_groups_embedded_items_inner import AttributeGroupsEmbeddedItemsInner
+from akeneo.models.attribute_groups_embedded_items_inner import AttributeGroupsEmbeddedItemsInner
 
 # TODO update the JSON string below
 json = "{}"

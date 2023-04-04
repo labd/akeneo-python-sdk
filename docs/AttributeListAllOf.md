@@ -36,7 +36,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.attribute_list_all_of import AttributeListAllOf
+from akeneo.models.attribute_list_all_of import AttributeListAllOf
 
 # TODO update the JSON string below
 json = "{}"

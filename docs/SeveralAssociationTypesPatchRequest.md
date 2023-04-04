@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.several_association_types_patch_request import SeveralAssociationTypesPatchRequest
+from akeneo.models.several_association_types_patch_request import SeveralAssociationTypesPatchRequest
 
 # TODO update the JSON string below
 json = "{}"

@@ -1,4 +1,4 @@
-# openapi_client.ReferenceEntityAttributeApi
+# akeneo.ReferenceEntityAttributeApi
 
 All URIs are relative to *http://demo.akeneo.com*
 
@@ -22,20 +22,20 @@ This endpoint allows you to get the list of attributes of a given reference enti
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ReferenceEntityAttributeApi(api_client)
+    api_instance = akeneo.ReferenceEntityAttributeApi(api_client)
     reference_entity_code = 'reference_entity_code_example' # str | Code of the reference entity
 
     try:
@@ -88,20 +88,20 @@ This endpoint allows you to get the information about a given attribute for a gi
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ReferenceEntityAttributeApi(api_client)
+    api_instance = akeneo.ReferenceEntityAttributeApi(api_client)
     reference_entity_code = 'reference_entity_code_example' # str | Code of the reference entity
     code = 'code_example' # str | Code of the resource
 
@@ -157,23 +157,23 @@ This endpoint allows you to update a given attribute for a given renference enti
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ReferenceEntityAttributeApi(api_client)
+    api_instance = akeneo.ReferenceEntityAttributeApi(api_client)
     reference_entity_code = 'reference_entity_code_example' # str | Code of the reference entity
     code = 'code_example' # str | Code of the resource
-    body = openapi_client.GetReferenceEntityAttributesCode200Response() # GetReferenceEntityAttributesCode200Response | 
+    body = akeneo.GetReferenceEntityAttributesCode200Response() # GetReferenceEntityAttributesCode200Response | 
 
     try:
         # Update/create an attribute of a given reference entity

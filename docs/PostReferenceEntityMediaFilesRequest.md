@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.post_reference_entity_media_files_request import PostReferenceEntityMediaFilesRequest
+from akeneo.models.post_reference_entity_media_files_request import PostReferenceEntityMediaFilesRequest
 
 # TODO update the JSON string below
 json = "{}"

@@ -1,4 +1,4 @@
-# openapi_client.AuthenticationApi
+# akeneo.AuthenticationApi
 
 All URIs are relative to *http://demo.akeneo.com*
 
@@ -20,23 +20,23 @@ This endpoint allows you to get an authentication token. No need to be authentic
 from __future__ import print_function
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import akeneo
+from akeneo.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://demo.akeneo.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = akeneo.Configuration(
     host = "http://demo.akeneo.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AuthenticationApi(api_client)
+    api_instance = akeneo.AuthenticationApi(api_client)
     content_type = 'content_type_example' # str | Equal to 'application/json' or 'application/x-www-form-urlencoded', no other value allowed
     authorization = 'authorization_example' # str | Equal to 'Basic xx', where 'xx' is the base 64 encoding of the client id and secret. Find out how to generate them in the <a href=\"/documentation/authentication.html#client-idsecret-generation\">Client ID/secret generation</a> section.
-    body = openapi_client.PostTokenRequest() # PostTokenRequest |  (optional)
+    body = akeneo.PostTokenRequest() # PostTokenRequest |  (optional)
 
     try:
         # Get authentication token
