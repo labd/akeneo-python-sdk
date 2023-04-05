@@ -76,7 +76,7 @@ class AssetEmbeddedItemsInnerAllOf(BaseModel):
 
         _obj = AssetEmbeddedItemsInnerAllOf.parse_obj({
             "code": obj.get("code"),
-            "values": dict((_k, [AssetEmbeddedItemsInnerAllOfValuesValueInner.from_dict(_item) for _item in _v]) for _k, _v in obj.get("values").items()), 
+            "values": dict((_k, Dict[str, List[AssetEmbeddedItemsInnerAllOfValuesValueInner]].from_dict(_v)) for _k, _v in obj.get("values").items()),
             "created": obj.get("created"),
             "updated": obj.get("updated")
         })

@@ -117,7 +117,7 @@ class Products1EmbeddedItemsInner(BaseModel):
             "categories": obj.get("categories"),
             "groups": obj.get("groups"),
             "parent": obj.get("parent") if obj.get("parent") is not None else 'null',
-            "values": dict((_k, [ProductsEmbeddedItemsInnerAllOf1ValuesValueInner.from_dict(_item) for _item in _v]) for _k, _v in obj.get("values").items()),
+            "values": dict((_k, Dict[str, List[ProductsEmbeddedItemsInnerAllOf1ValuesValueInner]].from_dict(_v)) for _k, _v in obj.get("values").items()),
             "associations": Products1EmbeddedItemsInnerAllOfAssociations.from_dict(obj.get("associations")) if obj.get("associations") is not None else None,
             "quantified_associations": Products1EmbeddedItemsInnerAllOfQuantifiedAssociations.from_dict(obj.get("quantified_associations")) if obj.get("quantified_associations") is not None else None,
             "created": obj.get("created"),

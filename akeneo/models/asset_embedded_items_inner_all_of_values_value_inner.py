@@ -28,7 +28,7 @@ class AssetEmbeddedItemsInnerAllOfValuesValueInner(BaseModel):
     """
     channel: Optional[StrictStr] = Field(None, description="Channel code of the asset attribute value")
     locale: Optional[StrictStr] = Field(None, description="Locale code of the asset attribute value")
-    data: Optional[Any] = Field(None, description="Asset attribute value. See <a href='/concepts/asset-manager.html#the-data-format'>the `data` format</a> section for more details.")
+    data: Optional[Dict[str, Any]] = Field(None, description="Asset attribute value. See <a href='/concepts/asset-manager.html#the-data-format'>the `data` format</a> section for more details.")
     __properties = ["channel", "locale", "data"]
 
     class Config:

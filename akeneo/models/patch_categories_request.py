@@ -17,9 +17,8 @@ import re  # noqa: F401
 import json
 
 
-from typing import Optional
+from typing import Dict, Optional
 from pydantic import BaseModel, Field, StrictInt, StrictStr
-from akeneo.models.categories_embedded_items_inner_all_of_labels import CategoriesEmbeddedItemsInnerAllOfLabels
 from akeneo.models.categories_embedded_items_inner_all_of_values import CategoriesEmbeddedItemsInnerAllOfValues
 
 class PatchCategoriesRequest(BaseModel):
@@ -32,7 +31,7 @@ class PatchCategoriesRequest(BaseModel):
     parent: Optional[StrictStr] = Field('null', description="Category code of the parent's category")
     updated: Optional[StrictStr] = Field(None, description="Date of the last update")
     position: Optional[StrictInt] = Field(None, description="Position of the category in its level, start from 1 (only available since the 7.0 version and when query parameter \"with_position\" is set to \"true\")")
-    labels: Optional[CategoriesEmbeddedItemsInnerAllOfLabels] = None
+    labels: Optional[Dict[str, StrictStr]] = Field(None, description="Category labels for each locale")
     values: Optional[CategoriesEmbeddedItemsInnerAllOfValues] = None
     __properties = ["code", "parent", "updated", "position", "labels", "values"]
 
@@ -59,9 +58,6 @@ class PatchCategoriesRequest(BaseModel):
                           exclude={
                           },
                           exclude_none=True)
-        # override the default output from pydantic by calling `to_dict()` of labels
-        if self.labels:
-            _dict['labels'] = self.labels.to_dict()
         # override the default output from pydantic by calling `to_dict()` of values
         if self.values:
             _dict['values'] = self.values.to_dict()
@@ -81,7 +77,7 @@ class PatchCategoriesRequest(BaseModel):
             "parent": obj.get("parent") if obj.get("parent") is not None else 'null',
             "updated": obj.get("updated"),
             "position": obj.get("position"),
-            "labels": CategoriesEmbeddedItemsInnerAllOfLabels.from_dict(obj.get("labels")) if obj.get("labels") is not None else None,
+            "labels": obj.get("labels"),
             "values": CategoriesEmbeddedItemsInnerAllOfValues.from_dict(obj.get("values")) if obj.get("values") is not None else None
         })
         return _obj

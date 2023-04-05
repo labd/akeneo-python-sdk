@@ -12,6 +12,22 @@ This repo contains the updated akeneo-web-api.json, which includes the manual ch
 ### manual adjustments
 See https://github.com/labd/akeneo-node-sdk/blob/main/IMPROVEMENTS.md for more improvements
 
+Changed 
+```json
+"properties": {
+    "localeCode": {
+        "type": "string",
+        "description": "Category label for the locale `localeCode`"
+    }
+}
+``` 
+to 
+
+```json
+"additionalProperties": {
+    "type": "string"
+},
+```
 ### OpenAPI generate problems
 Issue when trying to get products from the api. Fixed by setting `ProductsEmbeddedItemsInnerAllOf1ValuesValueInner` `data` property to `any` instead of `Dict[str, Any]`
 

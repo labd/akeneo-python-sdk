@@ -17,9 +17,8 @@ import re  # noqa: F401
 import json
 
 
-from typing import Optional
+from typing import Dict, Optional
 from pydantic import BaseModel, Field, StrictInt, StrictStr
-from akeneo.models.category_list_all_of_labels import CategoryListAllOfLabels
 from akeneo.models.category_list_all_of_values import CategoryListAllOfValues
 from akeneo.models.product_list_all_of_links import ProductListAllOfLinks
 
@@ -34,7 +33,7 @@ class CategoryList(BaseModel):
     parent: Optional[StrictStr] = Field('null', description="Category code of the parent's category")
     updated: Optional[StrictStr] = Field(None, description="Date of the last update")
     position: Optional[StrictInt] = Field(None, description="Position of the category in its level, start from 1 (only available since the 7.0 version and when query parameter \"with_position\" is set to \"true\")")
-    labels: Optional[CategoryListAllOfLabels] = None
+    labels: Optional[Dict[str, StrictStr]] = Field(None, description="Category labels for each locale")
     values: Optional[CategoryListAllOfValues] = None
     __properties = ["_links", "code", "parent", "updated", "position", "labels", "values"]
 
@@ -64,9 +63,6 @@ class CategoryList(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of links
         if self.links:
             _dict['_links'] = self.links.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of labels
-        if self.labels:
-            _dict['labels'] = self.labels.to_dict()
         # override the default output from pydantic by calling `to_dict()` of values
         if self.values:
             _dict['values'] = self.values.to_dict()
@@ -87,7 +83,7 @@ class CategoryList(BaseModel):
             "parent": obj.get("parent") if obj.get("parent") is not None else 'null',
             "updated": obj.get("updated"),
             "position": obj.get("position"),
-            "labels": CategoryListAllOfLabels.from_dict(obj.get("labels")) if obj.get("labels") is not None else None,
+            "labels": obj.get("labels"),
             "values": CategoryListAllOfValues.from_dict(obj.get("values")) if obj.get("values") is not None else None
         })
         return _obj
