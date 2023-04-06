@@ -19,7 +19,7 @@ import json
 
 from typing import Optional
 from pydantic import BaseModel, Field, StrictBool, StrictStr, validator
-from akeneo.models.attribute_list_all_of_labels1 import AttributeListAllOfLabels1
+from akeneo.models.attribute_list_all_of_labels import AttributeListAllOfLabels
 from akeneo.models.attribute_list_all_of_validations import AttributeListAllOfValidations
 
 class AttributeListAllOfTableConfiguration(BaseModel):
@@ -31,7 +31,7 @@ class AttributeListAllOfTableConfiguration(BaseModel):
     code: StrictStr = Field(..., description="Column code")
     data_type: StrictStr = Field(..., description="Column data type")
     validations: Optional[AttributeListAllOfValidations] = None
-    labels: Optional[AttributeListAllOfLabels1] = None
+    labels: Optional[AttributeListAllOfLabels] = None
     is_required_for_completeness: Optional[StrictBool] = Field(False, description="Defines if the column should be entirely filled for the attribute to be considered complete")
     __properties = ["code", "data_type", "validations", "labels", "is_required_for_completeness"]
 
@@ -85,7 +85,7 @@ class AttributeListAllOfTableConfiguration(BaseModel):
             "code": obj.get("code"),
             "data_type": obj.get("data_type"),
             "validations": AttributeListAllOfValidations.from_dict(obj.get("validations")) if obj.get("validations") is not None else None,
-            "labels": AttributeListAllOfLabels1.from_dict(obj.get("labels")) if obj.get("labels") is not None else None,
+            "labels": AttributeListAllOfLabels.from_dict(obj.get("labels")) if obj.get("labels") is not None else None,
             "is_required_for_completeness": obj.get("is_required_for_completeness") if obj.get("is_required_for_completeness") is not None else False
         })
         return _obj

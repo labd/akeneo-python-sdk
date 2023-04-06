@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **code** | **str** | Attribute code | 
 **type** | **str** | Attribute type. See &lt;a href&#x3D;&#39;/concepts/catalog-structure.html#attribute&#39;&gt;type&lt;/a&gt; section for more details. | 
-**labels** | [**AttributesEmbeddedItemsInnerAllOfLabels**](AttributesEmbeddedItemsInnerAllOfLabels.md) |  | [optional] 
+**labels** | **Dict[str, str]** | Attribute labels for each locale | [optional] 
 **group** | **str** | Attribute group | 
 **group_labels** | [**AttributesEmbeddedItemsInnerAllOfGroupLabels**](AttributesEmbeddedItemsInnerAllOfGroupLabels.md) |  | [optional] 
 **sort_order** | **int** | Order of the attribute in its group | [optional] 

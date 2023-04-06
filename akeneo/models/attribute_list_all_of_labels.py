@@ -26,7 +26,7 @@ class AttributeListAllOfLabels(BaseModel):
 
     Do not edit the class manually.
     """
-    locale_code: Optional[StrictStr] = Field(None, alias="localeCode", description="Attribute label for the locale `localeCode`")
+    locale_code: Optional[StrictStr] = Field(None, alias="localeCode", description="Column label for the locale `localeCode`")
     __properties = ["localeCode"]
 
     class Config:

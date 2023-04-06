@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **code** | **str** | Attribute&#39;s option code | 
-**labels** | [**AttributesEmbeddedItemsInnerAllOfLabels**](AttributesEmbeddedItemsInnerAllOfLabels.md) |  | [optional] 
+**labels** | **Dict[str, str]** | Attribute labels for each locale | [optional] 
 
 ## Example
 

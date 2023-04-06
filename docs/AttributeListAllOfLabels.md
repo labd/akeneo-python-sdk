@@ -1,11 +1,11 @@
 # AttributeListAllOfLabels
 
-Attribute labels for each locale
+Column labels for each locale
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**locale_code** | **str** | Attribute label for the locale &#x60;localeCode&#x60; | [optional] 
+**locale_code** | **str** | Column label for the locale &#x60;localeCode&#x60; | [optional] 
 
 ## Example
 

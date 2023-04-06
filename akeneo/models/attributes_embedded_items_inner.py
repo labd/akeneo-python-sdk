@@ -17,10 +17,9 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from typing import List, Optional
+from typing import Dict, List, Optional
 from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr, validator
 from akeneo.models.attributes_embedded_items_inner_all_of_group_labels import AttributesEmbeddedItemsInnerAllOfGroupLabels
-from akeneo.models.attributes_embedded_items_inner_all_of_labels import AttributesEmbeddedItemsInnerAllOfLabels
 from akeneo.models.attributes_embedded_items_inner_all_of_table_configuration_inner import AttributesEmbeddedItemsInnerAllOfTableConfigurationInner
 from akeneo.models.products_embedded_items_inner_all_of_links import ProductsEmbeddedItemsInnerAllOfLinks
 
@@ -33,7 +32,7 @@ class AttributesEmbeddedItemsInner(BaseModel):
     links: Optional[ProductsEmbeddedItemsInnerAllOfLinks] = Field(None, alias="_links")
     code: StrictStr = Field(..., description="Attribute code")
     type: StrictStr = Field(..., description="Attribute type. See <a href='/concepts/catalog-structure.html#attribute'>type</a> section for more details.")
-    labels: Optional[AttributesEmbeddedItemsInnerAllOfLabels] = None
+    labels: Optional[Dict[str, StrictStr]] = Field(None, description="Attribute labels for each locale")
     group: StrictStr = Field(..., description="Attribute group")
     group_labels: Optional[AttributesEmbeddedItemsInnerAllOfGroupLabels] = None
     sort_order: Optional[StrictInt] = Field(None, description="Order of the attribute in its group")
@@ -93,9 +92,6 @@ class AttributesEmbeddedItemsInner(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of links
         if self.links:
             _dict['_links'] = self.links.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of labels
-        if self.labels:
-            _dict['labels'] = self.labels.to_dict()
         # override the default output from pydantic by calling `to_dict()` of group_labels
         if self.group_labels:
             _dict['group_labels'] = self.group_labels.to_dict()
@@ -121,7 +117,7 @@ class AttributesEmbeddedItemsInner(BaseModel):
             "links": ProductsEmbeddedItemsInnerAllOfLinks.from_dict(obj.get("_links")) if obj.get("_links") is not None else None,
             "code": obj.get("code"),
             "type": obj.get("type"),
-            "labels": AttributesEmbeddedItemsInnerAllOfLabels.from_dict(obj.get("labels")) if obj.get("labels") is not None else None,
+            "labels": obj.get("labels"),
             "group": obj.get("group"),
             "group_labels": AttributesEmbeddedItemsInnerAllOfGroupLabels.from_dict(obj.get("group_labels")) if obj.get("group_labels") is not None else None,
             "sort_order": obj.get("sort_order"),

@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **code** | **str** | Attribute code | 
-**labels** | [**AttributesEmbeddedItemsInnerAllOfLabels**](AttributesEmbeddedItemsInnerAllOfLabels.md) |  | [optional] 
+**labels** | **Dict[str, str]** | Attribute labels for each locale | [optional] 
 **type** | **str** | Attribute type. See &lt;a href&#x3D;&#39;/concepts/reference-entities.html#reference-entity-attribute&#39;&gt;type&lt;/a&gt; section for more details. | 
 **value_per_locale** | **bool** | Whether the attribute is localizable, i.e. can have one value by locale | [optional] [default to False]
 **value_per_channel** | **bool** | Whether the attribute is scopable, i.e. can have one value by channel | [optional] [default to False]

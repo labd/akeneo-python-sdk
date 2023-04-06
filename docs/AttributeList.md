@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **links** | [**ProductListAllOfLinks**](ProductListAllOfLinks.md) |  | [optional] 
 **code** | **str** | Attribute code | 
 **type** | **str** | Attribute type. See &lt;a href&#x3D;&#39;/concepts/catalog-structure.html#attribute&#39;&gt;type&lt;/a&gt; section for more details. | 
-**labels** | [**AttributeListAllOfLabels**](AttributeListAllOfLabels.md) |  | [optional] 
+**labels** | **Dict[str, str]** | Attribute labels for each locale | [optional] 
 **group** | **str** | Attribute group | 
 **group_labels** | [**AttributeListAllOfGroupLabels**](AttributeListAllOfGroupLabels.md) |  | [optional] 
 **sort_order** | **int** | Order of the attribute in its group | [optional] 

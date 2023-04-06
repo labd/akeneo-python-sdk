@@ -17984,12 +17984,9 @@
                                     },
                                     "labels": {
                                       "type": "object",
-                                      "properties": {
-                                        "localeCode": {
-                                          "type": "string",
-                                          "description": "Attribute label for the locale `localeCode`"
-                                        }
-                                      },
+                                      "additionalProperties": {
+                                        "type": "string"
+                                        },
                                       "description": "Attribute labels for each locale",
                                       "x-validation-rules": "The `localeCode` is the code of an existing and activated locale"
                                     },
@@ -18569,12 +18566,9 @@
                     },
                     "labels": {
                       "type": "object",
-                      "properties": {
-                        "localeCode": {
-                          "type": "string",
-                          "description": "Attribute label for the locale `localeCode`"
-                        }
-                      },
+                      "additionalProperties": {
+                        "type": "string"
+                        },
                       "description": "Attribute labels for each locale",
                       "x-validation-rules": "The `localeCode` is the code of an existing and activated locale"
                     },
@@ -19042,12 +19036,9 @@
                     },
                     "labels": {
                       "type": "object",
-                      "properties": {
-                        "localeCode": {
-                          "type": "string",
-                          "description": "Attribute label for the locale `localeCode`"
-                        }
-                      },
+                      "additionalProperties": {
+                        "type": "string"
+                        },
                       "description": "Attribute labels for each locale",
                       "x-validation-rules": "The `localeCode` is the code of an existing and activated locale"
                     },
@@ -19543,12 +19534,9 @@
                       },
                       "labels": {
                         "type": "object",
-                        "properties": {
-                          "localeCode": {
-                            "type": "string",
-                            "description": "Attribute label for the locale `localeCode`"
-                          }
-                        },
+                        "additionalProperties": {
+                          "type": "string"
+                          },
                         "description": "Attribute labels for each locale",
                         "x-validation-rules": "The `localeCode` is the code of an existing and activated locale"
                       },
@@ -19978,12 +19966,9 @@
                     },
                     "labels": {
                       "type": "object",
-                      "properties": {
-                        "localeCode": {
-                          "type": "string",
-                          "description": "Attribute label for the locale `localeCode`"
-                        }
-                      },
+                      "additionalProperties": {
+                        "type": "string"
+                        },
                       "description": "Attribute labels for each locale",
                       "x-validation-rules": "The `localeCode` is the code of an existing and activated locale"
                     },
@@ -30068,12 +30053,9 @@
                         },
                         "labels": {
                           "type": "object",
-                          "properties": {
-                            "localeCode": {
-                              "type": "string",
-                              "description": "Attribute label for the locale `localeCode`"
-                            }
-                          },
+                          "additionalProperties": {
+                            "type": "string"
+                            },
                           "description": "Attribute labels for each locale",
                           "x-validation-rules": "The `localeCode` is the code of an existing and activated locale"
                         },
@@ -30322,12 +30304,9 @@
                       },
                       "labels": {
                         "type": "object",
-                        "properties": {
-                          "localeCode": {
-                            "type": "string",
-                            "description": "Attribute label for the locale `localeCode`"
-                          }
-                        },
+                        "additionalProperties": {
+                          "type": "string"
+                          },
                         "description": "Attribute labels for each locale",
                         "x-validation-rules": "The `localeCode` is the code of an existing and activated locale"
                       },
@@ -30596,12 +30575,9 @@
                     },
                     "labels": {
                       "type": "object",
-                      "properties": {
-                        "localeCode": {
-                          "type": "string",
-                          "description": "Attribute label for the locale `localeCode`"
-                        }
-                      },
+                      "additionalProperties": {
+                        "type": "string"
+                        },
                       "description": "Attribute labels for each locale",
                       "x-validation-rules": "The `localeCode` is the code of an existing and activated locale"
                     },
@@ -30910,12 +30886,9 @@
                         },
                         "labels": {
                           "type": "object",
-                          "properties": {
-                            "localeCode": {
-                              "type": "string",
-                              "description": "Attribute label for the locale `localeCode`"
-                            }
-                          },
+                          "additionalProperties": {
+                            "type": "string"
+                            },
                           "description": "Attribute labels for each locale",
                           "x-validation-rules": "The `localeCode` is the code of an existing and activated locale"
                         }
@@ -31054,12 +31027,9 @@
                       },
                       "labels": {
                         "type": "object",
-                        "properties": {
-                          "localeCode": {
-                            "type": "string",
-                            "description": "Attribute label for the locale `localeCode`"
-                          }
-                        },
+                        "additionalProperties": {
+                          "type": "string"
+                          },
                         "description": "Attribute labels for each locale",
                         "x-validation-rules": "The `localeCode` is the code of an existing and activated locale"
                       }
@@ -31220,12 +31190,9 @@
                     },
                     "labels": {
                       "type": "object",
-                      "properties": {
-                        "localeCode": {
-                          "type": "string",
-                          "description": "Attribute label for the locale `localeCode`"
-                        }
-                      },
+                      "additionalProperties": {
+                        "type": "string"
+                        },
                       "description": "Attribute labels for each locale",
                       "x-validation-rules": "The `localeCode` is the code of an existing and activated locale"
                     }
@@ -34378,12 +34345,9 @@
                         },
                         "labels": {
                           "type": "object",
-                          "properties": {
-                            "localeCode": {
-                              "type": "string",
-                              "description": "Attribute label for the locale `localeCode`"
-                            }
-                          },
+                          "additionalProperties": {
+                            "type": "string"
+                            },
                           "description": "Attribute labels for each locale",
                           "x-validation-rules": "The `localeCode` is the code of an existing and activated locale"
                         },
@@ -34651,12 +34615,9 @@
                       },
                       "labels": {
                         "type": "object",
-                        "properties": {
-                          "localeCode": {
-                            "type": "string",
-                            "description": "Attribute label for the locale `localeCode`"
-                          }
-                        },
+                        "additionalProperties": {
+                          "type": "string"
+                          },
                         "description": "Attribute labels for each locale",
                         "x-validation-rules": "The `localeCode` is the code of an existing and activated locale"
                       },
@@ -34946,12 +34907,9 @@
                     },
                     "labels": {
                       "type": "object",
-                      "properties": {
-                        "localeCode": {
-                          "type": "string",
-                          "description": "Attribute label for the locale `localeCode`"
-                        }
-                      },
+                      "additionalProperties": {
+                        "type": "string"
+                        },
                       "description": "Attribute labels for each locale",
                       "x-validation-rules": "The `localeCode` is the code of an existing and activated locale"
                     },
@@ -35280,12 +35238,9 @@
                         },
                         "labels": {
                           "type": "object",
-                          "properties": {
-                            "localeCode": {
-                              "type": "string",
-                              "description": "Attribute label for the locale `localeCode`"
-                            }
-                          },
+                          "additionalProperties": {
+                            "type": "string"
+                            },
                           "description": "Attribute labels for each locale",
                           "x-validation-rules": "The `localeCode` is the code of an existing and activated locale"
                         }
@@ -35424,12 +35379,9 @@
                       },
                       "labels": {
                         "type": "object",
-                        "properties": {
-                          "localeCode": {
-                            "type": "string",
-                            "description": "Attribute label for the locale `localeCode`"
-                          }
-                        },
+                        "additionalProperties": {
+                          "type": "string"
+                          },
                         "description": "Attribute labels for each locale",
                         "x-validation-rules": "The `localeCode` is the code of an existing and activated locale"
                       }
@@ -35590,12 +35542,9 @@
                     },
                     "labels": {
                       "type": "object",
-                      "properties": {
-                        "localeCode": {
-                          "type": "string",
-                          "description": "Attribute label for the locale `localeCode`"
-                        }
-                      },
+                      "additionalProperties": {
+                        "type": "string"
+                        },
                       "description": "Attribute labels for each locale",
                       "x-validation-rules": "The `localeCode` is the code of an existing and activated locale"
                     }
@@ -49038,12 +48987,9 @@
             },
             "labels": {
               "type": "object",
-              "properties": {
-                "localeCode": {
-                  "type": "string",
-                  "description": "Attribute label for the locale `localeCode`"
-                }
-              },
+              "additionalProperties": {
+                "type": "string"
+                },
               "description": "Attribute labels for each locale",
               "x-validation-rules": "The `localeCode` is the code of an existing and activated locale"
             },
@@ -49188,12 +49134,9 @@
               },
               "labels": {
                 "type": "object",
-                "properties": {
-                  "localeCode": {
-                    "type": "string",
-                    "description": "Attribute label for the locale `localeCode`"
-                  }
-                },
+                "additionalProperties": {
+                  "type": "string"
+                  },
                 "description": "Attribute labels for each locale",
                 "x-validation-rules": "The `localeCode` is the code of an existing and activated locale"
               },
@@ -49338,12 +49281,9 @@
             },
             "labels": {
               "type": "object",
-              "properties": {
-                "localeCode": {
-                  "type": "string",
-                  "description": "Attribute label for the locale `localeCode`"
-                }
-              },
+              "additionalProperties": {
+                "type": "string"
+                },
               "description": "Attribute labels for each locale",
               "x-validation-rules": "The `localeCode` is the code of an existing and activated locale"
             }
@@ -49371,12 +49311,9 @@
               },
               "labels": {
                 "type": "object",
-                "properties": {
-                  "localeCode": {
-                    "type": "string",
-                    "description": "Attribute label for the locale `localeCode`"
-                  }
-                },
+                "additionalProperties": {
+                  "type": "string"
+                  },
                 "description": "Attribute labels for each locale",
                 "x-validation-rules": "The `localeCode` is the code of an existing and activated locale"
               }
@@ -50697,11 +50634,8 @@
             },
             "labels": {
               "type": "object",
-              "properties": {
-                "localeCode": {
-                  "type": "string",
-                  "description": "Attribute label for the locale `localeCode`"
-                }
+              "additionalProperties": {
+                "type": "string"
               },
               "description": "Attribute labels for each locale",
               "x-validation-rules": "The `localeCode` is the code of an existing and activated locale"
@@ -51008,11 +50942,8 @@
                 },
                 "labels": {
                   "type": "object",
-                  "properties": {
-                    "localeCode": {
-                      "type": "string",
-                      "description": "Attribute label for the locale `localeCode`"
-                    }
+                  "additionalProperties": {
+                    "type": "string"
                   },
                   "description": "Attribute labels for each locale",
                   "x-validation-rules": "The `localeCode` is the code of an existing and activated locale"
@@ -52392,11 +52323,8 @@
               },
               "labels": {
                 "type": "object",
-                "properties": {
-                  "localeCode": {
-                    "type": "string",
-                    "description": "Attribute label for the locale `localeCode`"
-                  }
+                "additionalProperties": {
+                  "type": "string"
                 },
                 "description": "Attribute labels for each locale",
                 "x-validation-rules": "The `localeCode` is the code of an existing and activated locale"
@@ -52562,12 +52490,9 @@
               },
               "labels": {
                 "type": "object",
-                "properties": {
-                  "localeCode": {
-                    "type": "string",
-                    "description": "Attribute label for the locale `localeCode`"
-                  }
-                },
+                "additionalProperties": {
+                  "type": "string"
+                  },
                 "description": "Attribute labels for each locale",
                 "x-validation-rules": "The `localeCode` is the code of an existing and activated locale"
               }

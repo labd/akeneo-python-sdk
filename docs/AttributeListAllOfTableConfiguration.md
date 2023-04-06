@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **code** | **str** | Column code | 
 **data_type** | **str** | Column data type | 
 **validations** | [**AttributeListAllOfValidations**](AttributeListAllOfValidations.md) |  | [optional] 
-**labels** | [**AttributeListAllOfLabels1**](AttributeListAllOfLabels1.md) |  | [optional] 
+**labels** | [**AttributeListAllOfLabels**](AttributeListAllOfLabels.md) |  | [optional] 
 **is_required_for_completeness** | **bool** | Defines if the column should be entirely filled for the attribute to be considered complete | [optional] [default to False]
 
 ## Example

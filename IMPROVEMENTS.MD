@@ -21,6 +21,16 @@ Changed
     }
 }
 ``` 
+and
+```json
+"properties": {
+    "localeCode": {
+        "type": "string",
+        "description": "Attribute label for the locale `localeCode`"
+    }
+}
+```
+
 to 
 
 ```json
@@ -29,7 +39,7 @@ to
 },
 ```
 ### OpenAPI generate problems
-Issue when trying to get products from the api. Fixed by setting `ProductsEmbeddedItemsInnerAllOf1ValuesValueInner` `data` property to `any` instead of `Dict[str, Any]`
+Issues with data property on serveral classes. Fixed by searching `data: Dict[str, any]` and replacing all to `data: Any`
 
 Issue when trying to get products from the api. `dict has no attribute "from_dict"` Fixed by changing line 120 from `Products1EmbeddedItemsInner` to `"values": dict((_k, [ProductsEmbeddedItemsInnerAllOf1ValuesValueInner.from_dict(_item) for _item in _v]) for _k, _v in obj.get("values").items()),`
 Same for line 122 of ProductsEmbeddedItemsInner

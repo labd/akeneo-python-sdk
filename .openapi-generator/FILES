@@ -101,7 +101,6 @@ akeneo/models/attribute_list.py
 akeneo/models/attribute_list_all_of.py
 akeneo/models/attribute_list_all_of_group_labels.py
 akeneo/models/attribute_list_all_of_labels.py
-akeneo/models/attribute_list_all_of_labels1.py
 akeneo/models/attribute_list_all_of_table_configuration.py
 akeneo/models/attribute_list_all_of_validations.py
 akeneo/models/attribute_option.py
@@ -118,7 +117,6 @@ akeneo/models/attributes_embedded.py
 akeneo/models/attributes_embedded_items_inner.py
 akeneo/models/attributes_embedded_items_inner_all_of.py
 akeneo/models/attributes_embedded_items_inner_all_of_group_labels.py
-akeneo/models/attributes_embedded_items_inner_all_of_labels.py
 akeneo/models/attributes_embedded_items_inner_all_of_table_configuration_inner.py
 akeneo/models/attributes_embedded_items_inner_all_of_table_configuration_inner_labels.py
 akeneo/models/attributes_embedded_items_inner_all_of_table_configuration_inner_validations.py
@@ -493,7 +491,6 @@ docs/AttributeList.md
 docs/AttributeListAllOf.md
 docs/AttributeListAllOfGroupLabels.md
 docs/AttributeListAllOfLabels.md
-docs/AttributeListAllOfLabels1.md
 docs/AttributeListAllOfTableConfiguration.md
 docs/AttributeListAllOfValidations.md
 docs/AttributeOption.md
@@ -511,7 +508,6 @@ docs/AttributesEmbedded.md
 docs/AttributesEmbeddedItemsInner.md
 docs/AttributesEmbeddedItemsInnerAllOf.md
 docs/AttributesEmbeddedItemsInnerAllOfGroupLabels.md
-docs/AttributesEmbeddedItemsInnerAllOfLabels.md
 docs/AttributesEmbeddedItemsInnerAllOfTableConfigurationInner.md
 docs/AttributesEmbeddedItemsInnerAllOfTableConfigurationInnerLabels.md
 docs/AttributesEmbeddedItemsInnerAllOfTableConfigurationInnerValidations.md
