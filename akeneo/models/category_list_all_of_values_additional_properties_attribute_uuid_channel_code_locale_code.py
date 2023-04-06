@@ -26,7 +26,7 @@ class CategoryListAllOfValuesAdditionalPropertiesAttributeUuidChannelCodeLocaleC
 
     Do not edit the class manually.
     """
-    data: Optional[Dict[str, Any]] = Field(None, description="Attribute value")
+    data: Optional[Any] = Field(None, description="Attribute value")
     type: Optional[StrictStr] = Field(None, description="The attribute type")
     locale: Optional[StrictStr] = Field(None, description="<a href='api-reference.html#Locale'>Locale</a> code of the attribute value")
     channel: Optional[StrictStr] = Field(None, description="<a href='api-reference.html#Channel'>Channel</a> code of the attribute value")

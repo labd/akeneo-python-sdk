@@ -28,7 +28,7 @@ class ProductModelsEmbeddedItemsInnerAllOfValuesValueInner(BaseModel):
     """
     scope: Optional[StrictStr] = Field(None, description="<a href='api-reference.html#Channel'>Channel</a> code of the product value")
     locale: Optional[StrictStr] = Field(None, description="<a href='api-reference.html#Locale'>Locale</a> code of the product value")
-    data: Optional[Dict[str, Any]] = Field(None, description="<a href='api-reference.html#Productuuid'>Product</a> value")
+    data: Optional[Any] = Field(None, description="<a href='api-reference.html#Productuuid'>Product</a> value")
     __properties = ["scope", "locale", "data"]
 
     class Config:
