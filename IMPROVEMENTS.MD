@@ -38,6 +38,73 @@ to
     "type": "string"
 },
 ```
+
+Changed ```
+"associations": {
+                                      "type": "object",
+                                      "properties": {
+                                        "associationTypeCode": {
+                                          "type": "object",
+                                          "properties": {
+                                            "groups": {
+                                              "type": "array",
+                                              "description": "Array of groups codes with which the product is in relation",
+                                              "items": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "products": {
+                                              "type": "array",
+                                              "description": "Array of product identifiers with which the product is in relation",
+                                              "items": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "product_models": {
+                                              "type": "array",
+                                              "description": "Array of product model codes with which the product is in relation (only available since the v2.1)",
+                                              "items": {
+                                                "type": "string"
+                                              },
+                                              "x-from-version": "2.1"
+                                            }
+                                          }
+                                        }
+                                      },```
+
+To ```
+"associations": {
+                                    "type": "object",
+                                    "additionalProperties": {
+                                          "type": "object",
+                                          "properties": {
+                                            "groups": {
+                                              "type": "array",
+                                              "description": "Array of groups codes with which the product is in relation",
+                                              "items": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "products": {
+                                              "type": "array",
+                                              "description": "Array of product identifiers with which the product is in relation",
+                                              "items": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "product_models": {
+                                              "type": "array",
+                                              "description": "Array of product model codes with which the product is in relation (only available since the v2.1)",
+                                              "items": {
+                                                "type": "string"
+                                              },
+                                              "x-from-version": "2.1"
+                                            }
+                                        
+                                      }
+                                    },
+```
+
 ### OpenAPI generate problems
 Issues with data property on serveral classes. Fixed by searching `data: Dict[str, any]` and replacing all to `data: Any`
 
@@ -46,3 +113,5 @@ Same for line 122 of ProductsEmbeddedItemsInner
 
 Issue when getting assets. Same issue as above. Fixed by Changing line 79 from `AssetEmbeddedItemsInnerAllOf` to `"values": dict((_k, [AssetEmbeddedItemsInnerAllOfValuesValueInner.from_dict(_item) for _item in _v]) for _k, _v in obj.get("values").items()), `
 Set `data` from `AssetEmbeddedItemsInnerAllOfValuesValueInner` to any as well.
+
+Issues with associations; Fixed by changing line 127 from `ProductsEmbeddedItemsInner` to `            "associations": dict((_k, ProductsEmbeddedItemsInnerAllOf1AssociationsValue.from_dict(_v)) for _k, _v in obj.get("associations").items()),`

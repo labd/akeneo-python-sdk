@@ -19,7 +19,7 @@ import json
 
 from typing import Any, Dict, List, Optional
 from pydantic import BaseModel, Field, StrictBool, StrictStr
-from akeneo.models.products_embedded_items_inner_all_of1_associations import ProductsEmbeddedItemsInnerAllOf1Associations
+from akeneo.models.products_embedded_items_inner_all_of1_associations_value import ProductsEmbeddedItemsInnerAllOf1AssociationsValue
 from akeneo.models.products_embedded_items_inner_all_of1_completenesses_inner import ProductsEmbeddedItemsInnerAllOf1CompletenessesInner
 from akeneo.models.products_embedded_items_inner_all_of1_metadata import ProductsEmbeddedItemsInnerAllOf1Metadata
 from akeneo.models.products_embedded_items_inner_all_of1_quantified_associations import ProductsEmbeddedItemsInnerAllOf1QuantifiedAssociations
@@ -41,7 +41,7 @@ class ProductsEmbeddedItemsInner(BaseModel):
     groups: Optional[List[StrictStr]] = Field(None, description="Codes of the groups to which the product belong")
     parent: Optional[StrictStr] = Field('null', description="Code of the parent <a href='api-reference.html#Productmodel'>product model</a> when the product is a variant (only available since the 2.0). This parent can be modified since the 2.3.")
     values: Optional[Dict[str, List[ProductsEmbeddedItemsInnerAllOf1ValuesValueInner]]] = Field(None, description="Product attributes values, see <a href='/concepts/products.html#focus-on-the-product-values'>Product values</a> section for more details")
-    associations: Optional[ProductsEmbeddedItemsInnerAllOf1Associations] = None
+    associations: Optional[Dict[str, ProductsEmbeddedItemsInnerAllOf1AssociationsValue]] = Field(None, description="Several associations related to groups, product models and/or other products, grouped by association types")
     quantified_associations: Optional[ProductsEmbeddedItemsInnerAllOf1QuantifiedAssociations] = None
     created: Optional[StrictStr] = Field(None, description="Date of creation")
     updated: Optional[StrictStr] = Field(None, description="Date of the last update")
@@ -83,9 +83,13 @@ class ProductsEmbeddedItemsInner(BaseModel):
                 if self.values[_key]:
                     _field_dict[_key] = self.values[_key].to_dict()
             _dict['values'] = _field_dict
-        # override the default output from pydantic by calling `to_dict()` of associations
+        # override the default output from pydantic by calling `to_dict()` of each value in associations (dict)
+        _field_dict = {}
         if self.associations:
-            _dict['associations'] = self.associations.to_dict()
+            for _key in self.associations:
+                if self.associations[_key]:
+                    _field_dict[_key] = self.associations[_key].to_dict()
+            _dict['associations'] = _field_dict
         # override the default output from pydantic by calling `to_dict()` of quantified_associations
         if self.quantified_associations:
             _dict['quantified_associations'] = self.quantified_associations.to_dict()
@@ -120,7 +124,7 @@ class ProductsEmbeddedItemsInner(BaseModel):
             "groups": obj.get("groups"),
             "parent": obj.get("parent") if obj.get("parent") is not None else 'null',
             "values": dict((_k, [ProductsEmbeddedItemsInnerAllOf1ValuesValueInner.from_dict(_item) for _item in _v]) for _k, _v in obj.get("values").items()),
-            "associations": ProductsEmbeddedItemsInnerAllOf1Associations.from_dict(obj.get("associations")) if obj.get("associations") is not None else None,
+            "associations": dict((_k, Dict[str, ProductsEmbeddedItemsInnerAllOf1AssociationsValue].from_dict(_v)) for _k, _v in obj.get("associations").items()),
             "quantified_associations": ProductsEmbeddedItemsInnerAllOf1QuantifiedAssociations.from_dict(obj.get("quantified_associations")) if obj.get("quantified_associations") is not None else None,
             "created": obj.get("created"),
             "updated": obj.get("updated"),

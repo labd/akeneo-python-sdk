@@ -5,7 +5,7 @@ Several associations related to groups and/or other published products, grouped 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**association_type_code** | [**PublishedProductListAllOfAssociationsAssociationTypeCode**](PublishedProductListAllOfAssociationsAssociationTypeCode.md) |  | [optional] 
+**association_type_code** | [**Dict[str, ProductListAllOf1AssociationsAssociationTypeCode]**](ProductListAllOf1AssociationsAssociationTypeCode.md) |  | [optional] 
 
 ## Example
 

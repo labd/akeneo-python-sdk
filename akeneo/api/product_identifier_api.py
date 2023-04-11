@@ -23,8 +23,8 @@ from typing import Optional
 
 from akeneo.models.patch_products200_response import PatchProducts200Response
 from akeneo.models.patch_products_request import PatchProductsRequest
+from akeneo.models.post_products_request import PostProductsRequest
 from akeneo.models.products import Products
-from akeneo.models.products_embedded_items_inner_all_of1 import ProductsEmbeddedItemsInnerAllOf1
 
 from akeneo.api_client import ApiClient
 from akeneo.exceptions import (  # noqa: F401
@@ -187,7 +187,7 @@ class ProductIdentifierApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def get_draft_code(self, code : Annotated[StrictStr, Field(..., description="Code of the resource")], **kwargs) -> ProductsEmbeddedItemsInnerAllOf1:  # noqa: E501
+    def get_draft_code(self, code : Annotated[StrictStr, Field(..., description="Code of the resource")], **kwargs) -> PostProductsRequest:  # noqa: E501
         """Get a draft  # noqa: E501
 
         This endpoint allows you to get the information about a given draft.  # noqa: E501
@@ -212,7 +212,7 @@ class ProductIdentifierApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: ProductsEmbeddedItemsInnerAllOf1
+        :rtype: PostProductsRequest
         """
         kwargs['_return_http_data_only'] = True
         return self.get_draft_code_with_http_info(code, **kwargs)  # noqa: E501
@@ -251,7 +251,7 @@ class ProductIdentifierApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(ProductsEmbeddedItemsInnerAllOf1, status_code(int), headers(HTTPHeaderDict))
+        :rtype: tuple(PostProductsRequest, status_code(int), headers(HTTPHeaderDict))
         """
 
         _params = locals()
@@ -309,7 +309,7 @@ class ProductIdentifierApi(object):
         _auth_settings = []  # noqa: E501
 
         _response_types_map = {
-            '200': "ProductsEmbeddedItemsInnerAllOf1",
+            '200': "PostProductsRequest",
             '401': "GetProducts401Response",
             '403': "GetProducts401Response",
             '404': "GetProducts401Response",
@@ -558,7 +558,7 @@ class ProductIdentifierApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def get_products_code(self, code : Annotated[StrictStr, Field(..., description="Code of the resource")], with_attribute_options : Annotated[Optional[StrictBool], Field(description="Return labels of attribute options in the response. (Only available since the 5.0 version)")] = None, with_quality_scores : Annotated[Optional[StrictBool], Field(description="Return product quality scores in the response. (Only available since the 5.0 version)")] = None, with_completenesses : Annotated[Optional[StrictBool], Field(description="Return product completenesses in the response. (Only available since the 6.0 version)")] = None, **kwargs) -> ProductsEmbeddedItemsInnerAllOf1:  # noqa: E501
+    def get_products_code(self, code : Annotated[StrictStr, Field(..., description="Code of the resource")], with_attribute_options : Annotated[Optional[StrictBool], Field(description="Return labels of attribute options in the response. (Only available since the 5.0 version)")] = None, with_quality_scores : Annotated[Optional[StrictBool], Field(description="Return product quality scores in the response. (Only available since the 5.0 version)")] = None, with_completenesses : Annotated[Optional[StrictBool], Field(description="Return product completenesses in the response. (Only available since the 6.0 version)")] = None, **kwargs) -> PostProductsRequest:  # noqa: E501
         """Get a product  # noqa: E501
 
         This endpoint allows you to get the information about a given product. In the Entreprise Edition, since the v2.0, permissions based on your user groups are applied to the product you request.  # noqa: E501
@@ -589,7 +589,7 @@ class ProductIdentifierApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: ProductsEmbeddedItemsInnerAllOf1
+        :rtype: PostProductsRequest
         """
         kwargs['_return_http_data_only'] = True
         return self.get_products_code_with_http_info(code, with_attribute_options, with_quality_scores, with_completenesses, **kwargs)  # noqa: E501
@@ -634,7 +634,7 @@ class ProductIdentifierApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(ProductsEmbeddedItemsInnerAllOf1, status_code(int), headers(HTTPHeaderDict))
+        :rtype: tuple(PostProductsRequest, status_code(int), headers(HTTPHeaderDict))
         """
 
         _params = locals()
@@ -701,7 +701,7 @@ class ProductIdentifierApi(object):
         _auth_settings = []  # noqa: E501
 
         _response_types_map = {
-            '200': "ProductsEmbeddedItemsInnerAllOf1",
+            '200': "PostProductsRequest",
             '401': "GetProducts401Response",
             '403': "GetProducts401Response",
             '404': "GetProducts401Response",
@@ -873,7 +873,7 @@ class ProductIdentifierApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def patch_products_code(self, code : Annotated[StrictStr, Field(..., description="Code of the resource")], body : ProductsEmbeddedItemsInnerAllOf1, **kwargs) -> None:  # noqa: E501
+    def patch_products_code(self, code : Annotated[StrictStr, Field(..., description="Code of the resource")], body : PostProductsRequest, **kwargs) -> None:  # noqa: E501
         """Update/create a product  # noqa: E501
 
         This endpoint allows you to update a given product. Learn more about <a href=\"/documentation/update.html#update-behavior\">Update behavior</a>. Note that if no product exists for the given identifier, it creates it. In the Entreprise Edition, since the v2.0, permissions based on your user groups are applied to the product you try to update. It may result in the creation of a draft if you only have edit rights through the product's categories.  # noqa: E501
@@ -886,7 +886,7 @@ class ProductIdentifierApi(object):
         :param code: Code of the resource (required)
         :type code: str
         :param body: (required)
-        :type body: ProductsEmbeddedItemsInnerAllOf1
+        :type body: PostProductsRequest
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -906,7 +906,7 @@ class ProductIdentifierApi(object):
         return self.patch_products_code_with_http_info(code, body, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def patch_products_code_with_http_info(self, code : Annotated[StrictStr, Field(..., description="Code of the resource")], body : ProductsEmbeddedItemsInnerAllOf1, **kwargs):  # noqa: E501
+    def patch_products_code_with_http_info(self, code : Annotated[StrictStr, Field(..., description="Code of the resource")], body : PostProductsRequest, **kwargs):  # noqa: E501
         """Update/create a product  # noqa: E501
 
         This endpoint allows you to update a given product. Learn more about <a href=\"/documentation/update.html#update-behavior\">Update behavior</a>. Note that if no product exists for the given identifier, it creates it. In the Entreprise Edition, since the v2.0, permissions based on your user groups are applied to the product you try to update. It may result in the creation of a draft if you only have edit rights through the product's categories.  # noqa: E501
@@ -919,7 +919,7 @@ class ProductIdentifierApi(object):
         :param code: Code of the resource (required)
         :type code: str
         :param body: (required)
-        :type body: ProductsEmbeddedItemsInnerAllOf1
+        :type body: PostProductsRequest
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1021,7 +1021,7 @@ class ProductIdentifierApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def post_products(self, body : Optional[ProductsEmbeddedItemsInnerAllOf1] = None, **kwargs) -> None:  # noqa: E501
+    def post_products(self, body : Optional[PostProductsRequest] = None, **kwargs) -> None:  # noqa: E501
         """Create a new product  # noqa: E501
 
         This endpoint allows you to create a new product. In the Enterprise Edition, since the v2.0, permissions based on your user groups are applied to the product you try to create.  # noqa: E501
@@ -1032,7 +1032,7 @@ class ProductIdentifierApi(object):
         >>> result = thread.get()
 
         :param body:
-        :type body: ProductsEmbeddedItemsInnerAllOf1
+        :type body: PostProductsRequest
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1052,7 +1052,7 @@ class ProductIdentifierApi(object):
         return self.post_products_with_http_info(body, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def post_products_with_http_info(self, body : Optional[ProductsEmbeddedItemsInnerAllOf1] = None, **kwargs):  # noqa: E501
+    def post_products_with_http_info(self, body : Optional[PostProductsRequest] = None, **kwargs):  # noqa: E501
         """Create a new product  # noqa: E501
 
         This endpoint allows you to create a new product. In the Enterprise Edition, since the v2.0, permissions based on your user groups are applied to the product you try to create.  # noqa: E501
@@ -1063,7 +1063,7 @@ class ProductIdentifierApi(object):
         >>> result = thread.get()
 
         :param body:
-        :type body: ProductsEmbeddedItemsInnerAllOf1
+        :type body: PostProductsRequest
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code

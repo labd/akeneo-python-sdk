@@ -9,12 +9,12 @@ Name | Type | Description | Notes
 **family_variant** | **str** | Family variant code from which the product model inherits its attributes and variant attributes | 
 **parent** | **str** | Code of the parent &lt;a href&#x3D;&#39;api-reference.html#Productmodel&#39;&gt;product model&lt;/a&gt;. This parent can be modified since the 2.3. | [optional] [default to 'null']
 **categories** | **List[str]** | Codes of the &lt;a href&#x3D;&#39;api-reference.html#Category&#39;&gt;categories&lt;/a&gt; in which the product model is categorized | [optional] 
-**values** | [**PostProductModelsRequestValues**](PostProductModelsRequestValues.md) |  | [optional] 
+**values** | **Dict[str, List[ProductModelsEmbeddedItemsInnerAllOfValuesValueInner]]** | Product model attributes values, see &lt;a href&#x3D;&#39;/concepts/products.html#focus-on-the-product-values&#39;&gt;Product values&lt;/a&gt; section for more details | [optional] 
 **associations** | [**PostProductModelsRequestAssociations**](PostProductModelsRequestAssociations.md) |  | [optional] 
-**quantified_associations** | [**PostProductModelsRequestQuantifiedAssociations**](PostProductModelsRequestQuantifiedAssociations.md) |  | [optional] 
+**quantified_associations** | [**ProductModelsEmbeddedItemsInnerAllOfQuantifiedAssociations**](ProductModelsEmbeddedItemsInnerAllOfQuantifiedAssociations.md) |  | [optional] 
 **created** | **str** | Date of creation | [optional] 
 **updated** | **str** | Date of the last update | [optional] 
-**metadata** | [**PostProductModelsRequestMetadata**](PostProductModelsRequestMetadata.md) |  | [optional] 
+**metadata** | [**ProductModelsEmbeddedItemsInnerAllOfMetadata**](ProductModelsEmbeddedItemsInnerAllOfMetadata.md) |  | [optional] 
 **quality_scores** | **object** | Product model quality scores for each channel/locale combination (&lt;strong&gt;only available since the 7.0 version&lt;/strong&gt; and when the \&quot;with_quality_scores\&quot; query parameter is set to \&quot;true\&quot;) | [optional] 
 
 ## Example

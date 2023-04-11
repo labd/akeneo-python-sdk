@@ -80,7 +80,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_draft_code**
-> ProductsEmbeddedItemsInnerAllOf1 get_draft_code(code)
+> PostProductsRequest get_draft_code(code)
 
 Get a draft
 
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProductsEmbeddedItemsInnerAllOf1**](ProductsEmbeddedItemsInnerAllOf1.md)
+[**PostProductsRequest**](PostProductsRequest.md)
 
 ### Authorization
 
@@ -238,7 +238,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_products_code**
-> ProductsEmbeddedItemsInnerAllOf1 get_products_code(code, with_attribute_options=with_attribute_options, with_quality_scores=with_quality_scores, with_completenesses=with_completenesses)
+> PostProductsRequest get_products_code(code, with_attribute_options=with_attribute_options, with_quality_scores=with_quality_scores, with_completenesses=with_completenesses)
 
 Get a product
 
@@ -289,7 +289,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProductsEmbeddedItemsInnerAllOf1**](ProductsEmbeddedItemsInnerAllOf1.md)
+[**PostProductsRequest**](PostProductsRequest.md)
 
 ### Authorization
 
@@ -407,7 +407,7 @@ with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = akeneo.ProductIdentifierApi(api_client)
     code = 'code_example' # str | Code of the resource
-    body = akeneo.ProductsEmbeddedItemsInnerAllOf1() # ProductsEmbeddedItemsInnerAllOf1 | 
+    body = akeneo.PostProductsRequest() # PostProductsRequest | 
 
     try:
         # Update/create a product
@@ -421,7 +421,7 @@ with akeneo.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **code** | **str**| Code of the resource | 
- **body** | [**ProductsEmbeddedItemsInnerAllOf1**](ProductsEmbeddedItemsInnerAllOf1.md)|  | 
+ **body** | [**PostProductsRequest**](PostProductsRequest.md)|  | 
 
 ### Return type
 
@@ -475,7 +475,7 @@ configuration = akeneo.Configuration(
 with akeneo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = akeneo.ProductIdentifierApi(api_client)
-    body = akeneo.ProductsEmbeddedItemsInnerAllOf1() # ProductsEmbeddedItemsInnerAllOf1 |  (optional)
+    body = akeneo.PostProductsRequest() # PostProductsRequest |  (optional)
 
     try:
         # Create a new product
@@ -488,7 +488,7 @@ with akeneo.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ProductsEmbeddedItemsInnerAllOf1**](ProductsEmbeddedItemsInnerAllOf1.md)|  | [optional] 
+ **body** | [**PostProductsRequest**](PostProductsRequest.md)|  | [optional] 
 
 ### Return type
 

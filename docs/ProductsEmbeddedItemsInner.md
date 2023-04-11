@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **groups** | **List[str]** | Codes of the groups to which the product belong | [optional] 
 **parent** | **str** | Code of the parent &lt;a href&#x3D;&#39;api-reference.html#Productmodel&#39;&gt;product model&lt;/a&gt; when the product is a variant (only available since the 2.0). This parent can be modified since the 2.3. | [optional] [default to 'null']
 **values** | **Dict[str, List[ProductsEmbeddedItemsInnerAllOf1ValuesValueInner]]** | Product attributes values, see &lt;a href&#x3D;&#39;/concepts/products.html#focus-on-the-product-values&#39;&gt;Product values&lt;/a&gt; section for more details | [optional] 
-**associations** | [**ProductsEmbeddedItemsInnerAllOf1Associations**](ProductsEmbeddedItemsInnerAllOf1Associations.md) |  | [optional] 
+**associations** | [**Dict[str, ProductsEmbeddedItemsInnerAllOf1AssociationsValue]**](ProductsEmbeddedItemsInnerAllOf1AssociationsValue.md) | Several associations related to groups, product models and/or other products, grouped by association types | [optional] 
 **quantified_associations** | [**ProductsEmbeddedItemsInnerAllOf1QuantifiedAssociations**](ProductsEmbeddedItemsInnerAllOf1QuantifiedAssociations.md) |  | [optional] 
 **created** | **str** | Date of creation | [optional] 
 **updated** | **str** | Date of the last update | [optional] 

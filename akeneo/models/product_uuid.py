@@ -19,7 +19,7 @@ import json
 
 from typing import Any, Dict, List, Optional
 from pydantic import BaseModel, Field, StrictBool, StrictStr
-from akeneo.models.products1_embedded_items_inner_all_of_associations import Products1EmbeddedItemsInnerAllOfAssociations
+from akeneo.models.product_uuid_associations import ProductUuidAssociations
 from akeneo.models.products1_embedded_items_inner_all_of_quantified_associations import Products1EmbeddedItemsInnerAllOfQuantifiedAssociations
 from akeneo.models.products_embedded_items_inner_all_of1_completenesses_inner import ProductsEmbeddedItemsInnerAllOf1CompletenessesInner
 from akeneo.models.products_embedded_items_inner_all_of1_metadata import ProductsEmbeddedItemsInnerAllOf1Metadata
@@ -38,7 +38,7 @@ class ProductUuid(BaseModel):
     groups: Optional[List[StrictStr]] = Field(None, description="Codes of the groups to which the product belong")
     parent: Optional[StrictStr] = Field('null', description="Code of the parent <a href='api-reference.html#Productmodel'>product model</a> when the product is a variant (only available since the 2.0). This parent can be modified since the 2.3.")
     values: Optional[Dict[str, List[ProductsEmbeddedItemsInnerAllOf1ValuesValueInner]]] = Field(None, description="Product attributes values, see <a href='/concepts/products.html#focus-on-the-product-values'>Product values</a> section for more details")
-    associations: Optional[Products1EmbeddedItemsInnerAllOfAssociations] = None
+    associations: Optional[ProductUuidAssociations] = None
     quantified_associations: Optional[Products1EmbeddedItemsInnerAllOfQuantifiedAssociations] = None
     created: Optional[StrictStr] = Field(None, description="Date of creation")
     updated: Optional[StrictStr] = Field(None, description="Date of the last update")
@@ -112,7 +112,7 @@ class ProductUuid(BaseModel):
             "groups": obj.get("groups"),
             "parent": obj.get("parent") if obj.get("parent") is not None else 'null',
             "values": dict((_k, Dict[str, List[ProductsEmbeddedItemsInnerAllOf1ValuesValueInner]].from_dict(_v)) for _k, _v in obj.get("values").items()),
-            "associations": Products1EmbeddedItemsInnerAllOfAssociations.from_dict(obj.get("associations")) if obj.get("associations") is not None else None,
+            "associations": ProductUuidAssociations.from_dict(obj.get("associations")) if obj.get("associations") is not None else None,
             "quantified_associations": Products1EmbeddedItemsInnerAllOfQuantifiedAssociations.from_dict(obj.get("quantified_associations")) if obj.get("quantified_associations") is not None else None,
             "created": obj.get("created"),
             "updated": obj.get("updated"),

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **groups** | **List[str]** | Codes of the groups to which the product belong | [optional] 
 **parent** | **str** | Code of the parent &lt;a href&#x3D;&#39;api-reference.html#Productmodel&#39;&gt;product model&lt;/a&gt; when the product is a variant (only available since the 2.0). This parent can be modified since the 2.3. | [optional] [default to 'null']
 **values** | **Dict[str, List[ProductsEmbeddedItemsInnerAllOf1ValuesValueInner]]** | Product attributes values, see &lt;a href&#x3D;&#39;/concepts/products.html#focus-on-the-product-values&#39;&gt;Product values&lt;/a&gt; section for more details | [optional] 
-**associations** | [**Products1EmbeddedItemsInnerAllOfAssociations**](Products1EmbeddedItemsInnerAllOfAssociations.md) |  | [optional] 
+**associations** | [**ProductUuidAssociations**](ProductUuidAssociations.md) |  | [optional] 
 **quantified_associations** | [**Products1EmbeddedItemsInnerAllOfQuantifiedAssociations**](Products1EmbeddedItemsInnerAllOfQuantifiedAssociations.md) |  | [optional] 
 **created** | **str** | Date of creation | [optional] 
 **updated** | **str** | Date of the last update | [optional] 

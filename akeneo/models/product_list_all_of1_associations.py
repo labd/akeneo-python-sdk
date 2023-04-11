@@ -17,7 +17,7 @@ import re  # noqa: F401
 import json
 
 
-from typing import Optional
+from typing import Dict, Optional
 from pydantic import BaseModel, Field
 from akeneo.models.product_list_all_of1_associations_association_type_code import ProductListAllOf1AssociationsAssociationTypeCode
 
@@ -27,7 +27,7 @@ class ProductListAllOf1Associations(BaseModel):
 
     Do not edit the class manually.
     """
-    association_type_code: Optional[ProductListAllOf1AssociationsAssociationTypeCode] = Field(None, alias="associationTypeCode")
+    association_type_code: Optional[Dict[str, ProductListAllOf1AssociationsAssociationTypeCode]] = Field(None, alias="associationTypeCode")
     __properties = ["associationTypeCode"]
 
     class Config:
@@ -53,9 +53,13 @@ class ProductListAllOf1Associations(BaseModel):
                           exclude={
                           },
                           exclude_none=True)
-        # override the default output from pydantic by calling `to_dict()` of association_type_code
+        # override the default output from pydantic by calling `to_dict()` of each value in association_type_code (dict)
+        _field_dict = {}
         if self.association_type_code:
-            _dict['associationTypeCode'] = self.association_type_code.to_dict()
+            for _key in self.association_type_code:
+                if self.association_type_code[_key]:
+                    _field_dict[_key] = self.association_type_code[_key].to_dict()
+            _dict['associationTypeCode'] = _field_dict
         return _dict
 
     @classmethod
@@ -68,7 +72,7 @@ class ProductListAllOf1Associations(BaseModel):
             return ProductListAllOf1Associations.parse_obj(obj)
 
         _obj = ProductListAllOf1Associations.parse_obj({
-            "association_type_code": ProductListAllOf1AssociationsAssociationTypeCode.from_dict(obj.get("associationTypeCode")) if obj.get("associationTypeCode") is not None else None
+            "association_type_code": dict((_k, Dict[str, ProductListAllOf1AssociationsAssociationTypeCode].from_dict(_v)) for _k, _v in obj.get("associationTypeCode").items())
         })
         return _obj
 

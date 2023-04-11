@@ -11,14 +11,14 @@ Name | Type | Description | Notes
 **categories** | **List[str]** | Codes of the &lt;a href&#x3D;&#39;api-reference.html#Category&#39;&gt;categories&lt;/a&gt; in which the product is classified | [optional] 
 **groups** | **List[str]** | Codes of the groups to which the product belong | [optional] 
 **parent** | **str** | Code of the parent &lt;a href&#x3D;&#39;api-reference.html#Productmodel&#39;&gt;product model&lt;/a&gt; when the product is a variant (only available since the 2.0). This parent can be modified since the 2.3. | [optional] [default to 'null']
-**values** | [**PostProductsRequestValues**](PostProductsRequestValues.md) |  | [optional] 
+**values** | **Dict[str, List[ProductsEmbeddedItemsInnerAllOf1ValuesValueInner]]** | Product attributes values, see &lt;a href&#x3D;&#39;/concepts/products.html#focus-on-the-product-values&#39;&gt;Product values&lt;/a&gt; section for more details | [optional] 
 **associations** | [**PostProductsRequestAssociations**](PostProductsRequestAssociations.md) |  | [optional] 
-**quantified_associations** | [**PostProductsRequestQuantifiedAssociations**](PostProductsRequestQuantifiedAssociations.md) |  | [optional] 
+**quantified_associations** | [**ProductsEmbeddedItemsInnerAllOf1QuantifiedAssociations**](ProductsEmbeddedItemsInnerAllOf1QuantifiedAssociations.md) |  | [optional] 
 **created** | **str** | Date of creation | [optional] 
 **updated** | **str** | Date of the last update | [optional] 
-**metadata** | [**PostProductsRequestMetadata**](PostProductsRequestMetadata.md) |  | [optional] 
+**metadata** | [**ProductsEmbeddedItemsInnerAllOf1Metadata**](ProductsEmbeddedItemsInnerAllOf1Metadata.md) |  | [optional] 
 **quality_scores** | **object** | Product quality scores for each channel/locale combination (only available since the 5.0 and when the \&quot;with_quality_scores\&quot; query parameter is set to \&quot;true\&quot;) | [optional] 
-**completenesses** | [**List[PostProductsRequestCompletenessesInner]**](PostProductsRequestCompletenessesInner.md) | Product completenesses for each channel/locale combination (only available since the 7.0 version, and when the \&quot;with_completenesses\&quot; query parameter is set to \&quot;true\&quot;) | [optional] 
+**completenesses** | [**List[ProductsEmbeddedItemsInnerAllOf1CompletenessesInner]**](ProductsEmbeddedItemsInnerAllOf1CompletenessesInner.md) | Product completenesses for each channel/locale combination (only available since the 7.0 version, and when the \&quot;with_completenesses\&quot; query parameter is set to \&quot;true\&quot;) | [optional] 
 
 ## Example
 

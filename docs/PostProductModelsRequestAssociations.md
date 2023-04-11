@@ -5,7 +5,7 @@ Several associations related to groups, product and/or other product models, gro
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**association_type_code** | [**PostProductsRequestAssociationsAssociationTypeCode**](PostProductsRequestAssociationsAssociationTypeCode.md) |  | [optional] 
+**association_type_code** | [**ProductsEmbeddedItemsInnerAllOf1AssociationsAssociationTypeCode**](ProductsEmbeddedItemsInnerAllOf1AssociationsAssociationTypeCode.md) |  | [optional] 
 
 ## Example
 
