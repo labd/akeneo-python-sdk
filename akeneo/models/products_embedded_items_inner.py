@@ -113,7 +113,6 @@ class ProductsEmbeddedItemsInner(BaseModel):
 
         if type(obj) is not dict:
             return ProductsEmbeddedItemsInner.parse_obj(obj)
-
         _obj = ProductsEmbeddedItemsInner.parse_obj({
             "links": ProductsEmbeddedItemsInnerAllOfLinks.from_dict(obj.get("_links")) if obj.get("_links") is not None else None,
             "uuid": obj.get("uuid"),
@@ -124,7 +123,7 @@ class ProductsEmbeddedItemsInner(BaseModel):
             "groups": obj.get("groups"),
             "parent": obj.get("parent") if obj.get("parent") is not None else 'null',
             "values": dict((_k, [ProductsEmbeddedItemsInnerAllOf1ValuesValueInner.from_dict(_item) for _item in _v]) for _k, _v in obj.get("values").items()),
-            "associations": dict((_k, Dict[str, ProductsEmbeddedItemsInnerAllOf1AssociationsValue].from_dict(_v)) for _k, _v in obj.get("associations").items()),
+            "associations": dict((_k, ProductsEmbeddedItemsInnerAllOf1AssociationsValue.from_dict(_v)) for _k, _v in obj.get("associations", {}).items()),
             "quantified_associations": ProductsEmbeddedItemsInnerAllOf1QuantifiedAssociations.from_dict(obj.get("quantified_associations")) if obj.get("quantified_associations") is not None else None,
             "created": obj.get("created"),
             "updated": obj.get("updated"),
