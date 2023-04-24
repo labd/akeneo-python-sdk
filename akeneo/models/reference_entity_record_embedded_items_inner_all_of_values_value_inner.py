@@ -28,7 +28,7 @@ class ReferenceEntityRecordEmbeddedItemsInnerAllOfValuesValueInner(BaseModel):
     """
     channel: Optional[StrictStr] = Field(None, description="Channel code of the reference entity record value")
     locale: Optional[StrictStr] = Field(None, description="Locale code of the reference entity record value")
-    data: Optional[Dict[str, Any]] = Field(None, description="Reference entity record value. See <a href='/concepts/reference-entities.html#the-data-format'>the `data` format</a> section for more details.")
+    data: Optional[Any] = Field(None, description="Reference entity record value. See <a href='/concepts/reference-entities.html#the-data-format'>the `data` format</a> section for more details.")
     __properties = ["channel", "locale", "data"]
 
     class Config:

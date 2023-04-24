@@ -74,9 +74,15 @@ class ReferenceEntityRecordEmbeddedItemsInnerAllOf(BaseModel):
         if type(obj) is not dict:
             return ReferenceEntityRecordEmbeddedItemsInnerAllOf.parse_obj(obj)
 
+        values = {}
+        for _k, _v in obj.get("values").items():
+            values[_k] = []
+            for _i in _v:
+                values[_k].append(ReferenceEntityRecordEmbeddedItemsInnerAllOfValuesValueInner.from_dict(_i))
+
         _obj = ReferenceEntityRecordEmbeddedItemsInnerAllOf.parse_obj({
             "code": obj.get("code"),
-            "values": dict((_k, Dict[str, List[ReferenceEntityRecordEmbeddedItemsInnerAllOfValuesValueInner]].from_dict(_v)) for _k, _v in obj.get("values").items()),
+            "values": values,
             "created": obj.get("created") if obj.get("created") is not None else 'null',
             "updated": obj.get("updated") if obj.get("updated") is not None else 'null'
         })
