@@ -115,3 +115,8 @@ Issue when getting assets. Same issue as above. Fixed by Changing line 79 from `
 Set `data` from `AssetEmbeddedItemsInnerAllOfValuesValueInner` to any as well.
 
 Issues with associations; Fixed by changing line 127 from `ProductsEmbeddedItemsInner` to `            "associations": dict((_k, ProductsEmbeddedItemsInnerAllOf1AssociationsValue.from_dict(_v)) for _k, _v in obj.get("associations").items()),`
+
+Issues with reference entity records see commit: e0abd9196ea8b9c58b19b80e7ae5fbbb2d79330d
+
+Set labels from `attribute_options_embedded_items_inner_all_of.py` on line 33 to `    labels: Optional[dict[str, str]] = None
+`

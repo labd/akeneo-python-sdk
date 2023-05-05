@@ -30,7 +30,7 @@ class AttributeOptionsEmbeddedItemsInnerAllOf(BaseModel):
     code: StrictStr = Field(..., description="Code of option")
     attribute: Optional[StrictStr] = Field(None, description="Code of attribute related to the attribute option")
     sort_order: Optional[StrictInt] = Field(None, description="Order of attribute option")
-    labels: Optional[AttributeOptionsEmbeddedItemsInnerAllOfLabels] = None
+    labels: Optional[dict[str, str]] = None
     __properties = ["code", "attribute", "sort_order", "labels"]
 
     class Config:
@@ -74,7 +74,7 @@ class AttributeOptionsEmbeddedItemsInnerAllOf(BaseModel):
             "code": obj.get("code"),
             "attribute": obj.get("attribute"),
             "sort_order": obj.get("sort_order"),
-            "labels": AttributeOptionsEmbeddedItemsInnerAllOfLabels.from_dict(obj.get("labels")) if obj.get("labels") is not None else None
+            "labels": obj.get("labels") if obj.get("labels") is not None else None
         })
         return _obj
 
