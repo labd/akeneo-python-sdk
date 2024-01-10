@@ -17,7 +17,7 @@ import re  # noqa: F401
 import json
 
 
-from typing import List, Optional
+from typing import Dict, List, Optional
 from pydantic import BaseModel, Field, StrictStr
 from akeneo.models.family_variants_embedded_items_inner_all_of_labels import FamilyVariantsEmbeddedItemsInnerAllOfLabels
 from akeneo.models.family_variants_embedded_items_inner_all_of_variant_attribute_sets_inner import FamilyVariantsEmbeddedItemsInnerAllOfVariantAttributeSetsInner
@@ -32,7 +32,7 @@ class FamilyVariantsEmbeddedItemsInner(BaseModel):
     links: Optional[ProductsEmbeddedItemsInnerAllOfLinks] = Field(None, alias="_links")
     code: StrictStr = Field(..., description="Family variant code")
     variant_attribute_sets: List[FamilyVariantsEmbeddedItemsInnerAllOfVariantAttributeSetsInner] = Field(..., description="Attributes distribution according to the enrichment level")
-    labels: Optional[FamilyVariantsEmbeddedItemsInnerAllOfLabels] = None
+    labels: Optional[Dict[str, StrictStr]] = Field(None, description="Family labels for each locale")
     __properties = ["_links", "code", "variant_attribute_sets", "labels"]
 
     class Config:
@@ -86,7 +86,7 @@ class FamilyVariantsEmbeddedItemsInner(BaseModel):
             "links": ProductsEmbeddedItemsInnerAllOfLinks.from_dict(obj.get("_links")) if obj.get("_links") is not None else None,
             "code": obj.get("code"),
             "variant_attribute_sets": [FamilyVariantsEmbeddedItemsInnerAllOfVariantAttributeSetsInner.from_dict(_item) for _item in obj.get("variant_attribute_sets")] if obj.get("variant_attribute_sets") is not None else None,
-            "labels": FamilyVariantsEmbeddedItemsInnerAllOfLabels.from_dict(obj.get("labels")) if obj.get("labels") is not None else None
+            "labels": obj.get("labels") if obj.get("labels") is not None else None
         })
         return _obj
 
