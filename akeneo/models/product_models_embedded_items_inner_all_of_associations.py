@@ -71,8 +71,11 @@ class ProductModelsEmbeddedItemsInnerAllOfAssociations(BaseModel):
         if type(obj) is not dict:
             return ProductModelsEmbeddedItemsInnerAllOfAssociations.parse_obj(obj)
 
+        if obj.get("values") is None:
+            return ProductModelsEmbeddedItemsInnerAllOfAssociations()
+
         _obj = ProductModelsEmbeddedItemsInnerAllOfAssociations.parse_obj({
-            "association_type_code": dict((_k, Dict[str, ProductsEmbeddedItemsInnerAllOf1AssociationsValue].from_dict(_v)) for _k, _v in obj.get("associationTypeCode").items())
+            "association_type_code": dict((_k, [ProductsEmbeddedItemsInnerAllOf1AssociationsValue.from_dict(_item) for _item in _v]) for _k, _v in obj.get("values").items()),
         })
         return _obj
 
