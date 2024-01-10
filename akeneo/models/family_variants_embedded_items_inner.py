@@ -32,7 +32,7 @@ class FamilyVariantsEmbeddedItemsInner(BaseModel):
     links: Optional[ProductsEmbeddedItemsInnerAllOfLinks] = Field(None, alias="_links")
     code: StrictStr = Field(..., description="Family variant code")
     variant_attribute_sets: List[FamilyVariantsEmbeddedItemsInnerAllOfVariantAttributeSetsInner] = Field(..., description="Attributes distribution according to the enrichment level")
-    labels: Optional[Dict[str, StrictStr]] = Field(None, description="Family labels for each locale")
+    labels: Optional[Dict[str, StrictStr]] = Field(None, description="Family variant labels for each locale")
     __properties = ["_links", "code", "variant_attribute_sets", "labels"]
 
     class Config:

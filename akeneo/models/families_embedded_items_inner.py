@@ -17,7 +17,7 @@ import re  # noqa: F401
 import json
 
 
-from typing import List, Optional
+from typing import Dict, List, Optional
 from pydantic import BaseModel, Field, StrictStr
 from akeneo.models.families_embedded_items_inner_all_of_attribute_requirements import FamiliesEmbeddedItemsInnerAllOfAttributeRequirements
 from akeneo.models.families_embedded_items_inner_all_of_labels import FamiliesEmbeddedItemsInnerAllOfLabels
@@ -35,7 +35,7 @@ class FamiliesEmbeddedItemsInner(BaseModel):
     attribute_as_image: Optional[StrictStr] = Field('null', description="Attribute code used as the main picture in the user interface (only since v2.0)")
     attributes: Optional[List[StrictStr]] = Field(None, description="Attributes codes that compose the family")
     attribute_requirements: Optional[FamiliesEmbeddedItemsInnerAllOfAttributeRequirements] = None
-    labels: Optional[FamiliesEmbeddedItemsInnerAllOfLabels] = None
+    labels: Optional[Dict[str, StrictStr]] = Field(None, description="Family variant labels for each locale")
     __properties = ["_links", "code", "attribute_as_label", "attribute_as_image", "attributes", "attribute_requirements", "labels"]
 
     class Config:
@@ -88,7 +88,7 @@ class FamiliesEmbeddedItemsInner(BaseModel):
             "attribute_as_image": obj.get("attribute_as_image") if obj.get("attribute_as_image") is not None else 'null',
             "attributes": obj.get("attributes"),
             "attribute_requirements": FamiliesEmbeddedItemsInnerAllOfAttributeRequirements.from_dict(obj.get("attribute_requirements")) if obj.get("attribute_requirements") is not None else None,
-            "labels": FamiliesEmbeddedItemsInnerAllOfLabels.from_dict(obj.get("labels")) if obj.get("labels") is not None else None
+            "labels": obj.get("labels") if obj.get("labels") is not None else None
         })
         return _obj
 
