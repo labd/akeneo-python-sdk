@@ -120,4 +120,4 @@ Issues with reference entity records see commit: e0abd9196ea8b9c58b19b80e7ae5fbb
 
 Set labels from `attribute_options_embedded_items_inner_all_of.py` on line 33 to `    labels: Optional[dict[str, str]] = None`
 
-Set labels from `attribute_group.py` on line 33 to `labels: Optional[Dict[str, StrictStr]] = Field(None, description="Attribute group labels for each locale")` and line 77 to `"attributes": obj.get("attributes"),`
+Set labels from `attribute_group.py` and `attribute_groups_embedded_items_inner.py` on line 33 to `labels: Optional[Dict[str, StrictStr]] = Field(None, description="Attribute group labels for each locale")` and line 77 to `"attributes": obj.get("attributes"),`

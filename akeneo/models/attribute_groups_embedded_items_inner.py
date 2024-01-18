@@ -17,7 +17,7 @@ import re  # noqa: F401
 import json
 
 
-from typing import List, Optional
+from typing import List, Optional, Dict
 from pydantic import BaseModel, Field, StrictInt, StrictStr
 from akeneo.models.attribute_groups_embedded_items_inner_all_of_labels import AttributeGroupsEmbeddedItemsInnerAllOfLabels
 from akeneo.models.products_embedded_items_inner_all_of_links import ProductsEmbeddedItemsInnerAllOfLinks
@@ -32,7 +32,7 @@ class AttributeGroupsEmbeddedItemsInner(BaseModel):
     code: StrictStr = Field(..., description="Attribute group code")
     sort_order: Optional[StrictInt] = Field(None, description="Attribute group order among other attribute groups")
     attributes: Optional[List[StrictStr]] = Field(None, description="Attribute codes that compose the attribute group")
-    labels: Optional[AttributeGroupsEmbeddedItemsInnerAllOfLabels] = None
+    labels: Optional[Dict[str, StrictStr]] = Field(None, description="Attribute group labels for each locale")
     __properties = ["_links", "code", "sort_order", "attributes", "labels"]
 
     class Config:
@@ -80,7 +80,7 @@ class AttributeGroupsEmbeddedItemsInner(BaseModel):
             "code": obj.get("code"),
             "sort_order": obj.get("sort_order"),
             "attributes": obj.get("attributes"),
-            "labels": AttributeGroupsEmbeddedItemsInnerAllOfLabels.from_dict(obj.get("labels")) if obj.get("labels") is not None else None
+            "labels": obj.get("labels")
         })
         return _obj
 
