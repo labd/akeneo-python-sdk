@@ -28,7 +28,7 @@ class AssociationTypesEmbeddedItemsInnerAllOf(BaseModel):
     Do not edit the class manually.
     """
     code: StrictStr = Field(..., description="Association type code")
-    labels: Optional[AssociationTypesEmbeddedItemsInnerAllOfLabels] = None
+    labels: Optional[dict] = None
     is_quantified: Optional[StrictBool] = Field(False, description="When true, the association is a quantified association (Only available in the PIM Serenity version.)")
     is_two_way: Optional[StrictBool] = Field(False, description="When true, the association is a two-way association (Only available in the PIM Serenity version.)")
     __properties = ["code", "labels", "is_quantified", "is_two_way"]
@@ -72,7 +72,7 @@ class AssociationTypesEmbeddedItemsInnerAllOf(BaseModel):
 
         _obj = AssociationTypesEmbeddedItemsInnerAllOf.parse_obj({
             "code": obj.get("code"),
-            "labels": AssociationTypesEmbeddedItemsInnerAllOfLabels.from_dict(obj.get("labels")) if obj.get("labels") is not None else None,
+            "labels": obj.get("labels") if obj.get("labels") is not None else None,
             "is_quantified": obj.get("is_quantified") if obj.get("is_quantified") is not None else False,
             "is_two_way": obj.get("is_two_way") if obj.get("is_two_way") is not None else False
         })
