@@ -42,7 +42,7 @@ class MeasurementFamilyApi(object):
         self.api_client = api_client
 
     @validate_arguments
-    def measurement_families_get_list(self, **kwargs) -> MeasurementFamiliesGetList200Response:  # noqa: E501
+    def measurement_families_get_list(self, **kwargs) -> List[MeasurementFamiliesGetList200Response]:  # noqa: E501
         """Get list of measurement families  # noqa: E501
 
         This endpoint allows you to get a list of measurement families.  # noqa: E501
@@ -157,7 +157,7 @@ class MeasurementFamilyApi(object):
         _auth_settings = []  # noqa: E501
 
         _response_types_map = {
-            '200': "MeasurementFamiliesGetList200Response",
+            '200': "List[MeasurementFamiliesGetList200Response]",
             '401': "GetProducts401Response",
             '406': "GetProducts401Response",
         }
