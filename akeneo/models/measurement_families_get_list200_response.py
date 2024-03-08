@@ -31,7 +31,7 @@ class MeasurementFamiliesGetList200Response(BaseModel):
     code: StrictStr = Field(..., description="Measurement family code")
     labels: Optional[MeasurementFamiliesGetList200ResponseLabels] = None
     standard_unit_code: StrictStr = Field(..., description="Unit code used as the standard unit for this measurement family")
-    units: MeasurementFamiliesGetList200ResponseUnits = ...
+    units: dict = Field(..., description="dict of units")
     __properties = ["code", "labels", "standard_unit_code", "units"]
 
     class Config:
@@ -73,12 +73,11 @@ class MeasurementFamiliesGetList200Response(BaseModel):
 
         if type(obj) is not dict:
             return MeasurementFamiliesGetList200Response.parse_obj(obj)
-
         _obj = MeasurementFamiliesGetList200Response.parse_obj({
             "code": obj.get("code"),
             "labels": MeasurementFamiliesGetList200ResponseLabels.from_dict(obj.get("labels")) if obj.get("labels") is not None else None,
             "standard_unit_code": obj.get("standard_unit_code"),
-            "units": MeasurementFamiliesGetList200ResponseUnits.from_dict(obj.get("units")) if obj.get("units") is not None else None
+            "units": obj.get("units") if obj.get("units") is not None else None
         })
         return _obj
 
