@@ -37,8 +37,8 @@ class AttributeListAllOfTableConfiguration(BaseModel):
 
     @validator('data_type')
     def data_type_validate_enum(cls, v):
-        if v not in ('select', 'text', 'number', 'boolean'):
-            raise ValueError("must validate the enum values ('select', 'text', 'number', 'boolean')")
+        if v not in ('select', 'text', 'number', 'boolean', 'measurement'):
+            raise ValueError("must validate the enum values ('select', 'text', 'number', 'boolean', 'measurement')")
         return v
 
     class Config:
