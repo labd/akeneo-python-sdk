@@ -28,3 +28,5 @@ README.md
 .travis.yml
 git_push.sh
 /test/*
+setup.cfg
+tox.ini

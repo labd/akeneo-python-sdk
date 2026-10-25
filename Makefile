@@ -7,4 +7,14 @@ generate:
 	openapi-generator generate \
 		-i ./akeneo-web-api.json \
 		-g python-nextgen \
-		--additional-properties=packageName=akeneo,projectName=akeneo-python-sdk,packageUrl=https://github.com/labd/akeneo-python-sdk.git \
+		--additional-properties=packageName=akeneo,projectName=akeneo-python-sdk,packageUrl=https://github.com/labd/akeneo-python-sdk.git
+	ruff check --fix akeneo test
+	ruff format akeneo test
+
+format:
+	ruff check --fix akeneo test
+	ruff format akeneo test
+
+lint:
+	ruff format --check akeneo test
+	ruff check akeneo test
