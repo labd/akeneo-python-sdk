@@ -20,7 +20,7 @@ from setuptools import setup, find_packages  # noqa: H301
 # http://pypi.python.org/pypi/setuptools
 NAME = "akeneo-python-sdk"
 VERSION = "1.0.0"
-PYTHON_REQUIRES = ">=3.7"
+PYTHON_REQUIRES = ">=3.10"
 REQUIRES = [
     "urllib3 >= 1.25.3",
     "python-dateutil",
@@ -37,6 +37,7 @@ setup(
     url="https://github.com/labd/akeneo-python-sdk.git",
     keywords=["OpenAPI", "OpenAPI-Generator", "Akeneo PIM REST API"],
     install_requires=REQUIRES,
+    python_requires=PYTHON_REQUIRES,
     packages=find_packages(exclude=["test", "tests"]),
     include_package_data=True,
     long_description_content_type='text/markdown',
