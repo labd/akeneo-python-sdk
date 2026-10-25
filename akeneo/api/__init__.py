@@ -36,7 +36,9 @@ from akeneo.api.product_model_api import ProductModelApi
 from akeneo.api.published_product_api import PublishedProductApi
 from akeneo.api.reference_entity_api import ReferenceEntityApi
 from akeneo.api.reference_entity_attribute_api import ReferenceEntityAttributeApi
-from akeneo.api.reference_entity_attribute_option_api import ReferenceEntityAttributeOptionApi
+from akeneo.api.reference_entity_attribute_option_api import (
+    ReferenceEntityAttributeOptionApi,
+)
 from akeneo.api.reference_entity_media_file_api import ReferenceEntityMediaFileApi
 from akeneo.api.reference_entity_record_api import ReferenceEntityRecordApi
 from akeneo.api.system_api import SystemApi
