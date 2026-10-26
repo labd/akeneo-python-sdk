@@ -16,6 +16,7 @@ import http.client as httplib
 import logging
 import multiprocessing
 import sys
+from importlib.metadata import version as _package_version
 
 import urllib3
 
@@ -373,7 +374,11 @@ class Configuration(object):
             "OS: {env}\n"
             "Python Version: {pyversion}\n"
             "Version of the API: 1.0.0\n"
-            "SDK Package Version: 1.0.0".format(env=sys.platform, pyversion=sys.version)
+            "SDK Package Version: {version}".format(
+                env=sys.platform,
+                pyversion=sys.version,
+                version=_package_version("akeneo-python-sdk"),
+            )
         )
 
     def get_host_settings(self):
