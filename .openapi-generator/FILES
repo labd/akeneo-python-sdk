@@ -839,8 +839,3 @@ docs/SeveralAssociationTypesPatchRequest.md
 docs/SeveralAttributeGroupsPatchRequest.md
 docs/SeveralChannelsPatchRequest.md
 docs/SystemApi.md
-requirements.txt
-setup.cfg
-setup.py
-test-requirements.txt
-tox.ini

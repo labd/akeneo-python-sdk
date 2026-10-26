@@ -30,3 +30,8 @@ git_push.sh
 /test/*
 setup.cfg
 tox.ini
+# Packaging is maintained by hand in pyproject.toml (uv)
+setup.py
+pyproject.toml
+requirements.txt
+test-requirements.txt

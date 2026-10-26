@@ -26,19 +26,17 @@ Then import the package:
 import akeneo
 ```
 
-### Setuptools
+### Development
 
-Install via [Setuptools](http://pypi.python.org/pypi/setuptools).
+The project uses [uv](https://docs.astral.sh/uv/):
 
 ```sh
-python setup.py install --user
+uv sync
+uv run pytest
 ```
-(or `sudo python setup.py install` to install the package for all users)
 
-Then import the package:
-```python
-import akeneo
-```
+The client is generated with `make generate` (openapi-generator `python-nextgen`
+6.4.0); packaging lives in `pyproject.toml` and is not touched by the generator.
 
 ## Getting Started
 
