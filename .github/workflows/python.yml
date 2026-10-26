@@ -75,7 +75,7 @@ jobs:
       # Creates or updates the release PR, or detects that it was merged
       - name: Prepare release
         id: changie
-        uses: labd/changie-release-action@21441517ec7159cb91e52b56e5151f4c7a068340 # v2.0.0-rc.5
+        uses: labd/changie-release-action@059406879b04f6e073547b325fbbff9a573038e3 # v2.0.0
         with:
           github-token: ${{ steps.app-token.outputs.token }}
           # uv.lock contains the project version as well
@@ -98,7 +98,7 @@ jobs:
           persist-credentials: false
 
       - name: Publish release
-        uses: labd/changie-release-action/pypi@21441517ec7159cb91e52b56e5151f4c7a068340 # v2.0.0-rc.5
+        uses: labd/changie-release-action/pypi@059406879b04f6e073547b325fbbff9a573038e3 # v2.0.0
         with:
           github-token: ${{ github.token }}
           version: ${{ needs.version.outputs.version }}
