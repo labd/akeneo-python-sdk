@@ -38,6 +38,50 @@ uv run pytest
 The client is generated with `make generate` (openapi-generator `python-nextgen`
 6.4.0); packaging lives in `pyproject.toml` and is not touched by the generator.
 
+## Changelog and releasing
+
+Every PR with a user facing change needs a change file in the `.changeset/` folder. Releases and
+`CHANGELOG.md` are generated from these files by [Knope](https://knope.tech). Commit messages are not
+used for the changelog.
+
+Create one interactively by running this in the root of the project
+([install Knope](https://knope.tech/installation/) first):
+
+```sh
+knope document-change
+```
+
+Or write the file by hand, for example `.changeset/fix-product-pagination.md`:
+
+```md
+---
+default: patch
+---
+
+# Fix pagination of `ProductUuidApi.get_products_uuid`
+```
+
+The first heading is the changelog entry. Any text below it is added as extra detail. The type
+(`default: ...`) selects the changelog section and the version bump:
+
+| Type         | Section          | Version bump |
+| ------------ | ---------------- | ------------ |
+| `major`      | Breaking changes | major        |
+| `minor`      | Added            | minor        |
+| `patch`      | Fixed            | patch        |
+| `deprecated` | Deprecated       | patch        |
+| `security`   | Security         | patch        |
+| `dependency` | Dependency       | patch        |
+
+We recommend `patch` or `minor` for most changes. Dependabot PRs get a `dependency` change file
+automatically.
+
+On every push to `main` Knope opens or updates a `chore: prepare release x.y.z` PR that bumps the
+version in `pyproject.toml` (the only place the version is stored; `akeneo.__version__` reads it
+from the installed package metadata), refreshes `uv.lock`, updates `CHANGELOG.md` and removes the
+change files. Merging that PR creates the `vx.y.z` tag and GitHub release and publishes the package
+to PyPI.
+
 ## Getting Started
 
 Please follow the [installation procedure](#installation--usage) and then run the following:

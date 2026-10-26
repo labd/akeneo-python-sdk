@@ -1,0 +1,76 @@
+[package]
+# `[project].version` in pyproject.toml is the single source of truth for the
+# version (`akeneo.__version__` reads it via importlib.metadata). Knope updates
+# it on release and tags `vX.Y.Z`.
+versioned_files = ["pyproject.toml"]
+changelog = "CHANGELOG.md"
+# Override the built-in sections (major/minor/patch) and add the extra kinds.
+# Custom types (deprecated, security, dependency) are released as patch.
+extra_changelog_sections = [
+    { types = ["major"], name = "Breaking changes" },
+    { types = ["minor"], name = "Added" },
+    { types = ["deprecated"], name = "Deprecated" },
+    { types = ["patch"], name = "Fixed" },
+    { types = ["security"], name = "Security" },
+    { types = ["dependency"], name = "Dependency" },
+    { footers = ["Changelog-Note"], name = "Notes" },
+]
+
+[changes]
+# Only change files in .changeset/ end up in the changelog.
+ignore_conventional_commits = true
+
+[[workflows]]
+name = "document-change"
+
+[[workflows.steps]]
+type = "CreateChangeFile"
+
+[[workflows]]
+name = "prepare-release"
+
+[[workflows.steps]]
+type = "Command"
+command = "git switch -c knope/release"
+
+[[workflows.steps]]
+type = "PrepareRelease"
+
+# Knope does not know uv.lock, which also records the project's own version.
+# Re-lock so `uv lock --check` / `uv sync --locked` keep passing. This only
+# updates the project entry, locked dependencies stay as they are.
+[[workflows.steps]]
+type = "Command"
+command = "uv lock"
+
+[[workflows.steps]]
+type = "Command"
+command = "git add uv.lock"
+
+[[workflows.steps]]
+type = "Command"
+command = "git commit -m \"chore: prepare release $version\""
+
+[[workflows.steps]]
+type = "Command"
+command = "git push --force --set-upstream origin knope/release"
+
+[[workflows.steps]]
+type = "CreatePullRequest"
+base = "main"
+
+[workflows.steps.title]
+template = "chore: prepare release $version"
+
+[workflows.steps.body]
+template = "This PR was created by Knope. Merging it creates the `v$version` tag and GitHub release and publishes `akeneo-python-sdk` $version to PyPI.\n\n$changelog"
+
+[[workflows]]
+name = "release"
+
+[[workflows.steps]]
+type = "Release"
+
+[github]
+owner = "labd"
+repo = "akeneo-python-sdk"
